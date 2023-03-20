@@ -1,0 +1,36 @@
+// Import base styles
+@import 'base/colors';
+@import 'base/typo';
+@import 'base/reset';
+
+// Import component styles
+@import 'components/buttons';
+@import 'components/forms';
+@import 'components/cards';
+@import 'components/modals';
+
+// Import layout styles
+@import 'layout/grid';
+@import 'layout/header';
+@import 'layout/footer';
+
+// Import page styles
+@import 'pages/home';
+@import 'pages/profile';
+@import 'pages/timeLine';
+
+// Import theme styles
+@import 'themes/dark';
+@import 'themes/light';
+
+// Import utility classes and mixins
+@import 'utilities/mixins';
+@import 'utilities/variables';
+
+h1 
+{
+color:$primary-color;
+background-color: $secondary-color;
+border:1px solid $dolar;
+color:$ee;
+}
