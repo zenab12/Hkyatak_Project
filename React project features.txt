@@ -1,0 +1,17 @@
+
+- Authentication in front-end (json server auth npm ) -> response from (login and register) accessToken stored it in local storage 
+- handle signup up and login (google auth)
+- home page landing page before login
+- home page after login (posts [image ,username,title, part of description])
+- button for add post 
+- add post page (form -> title , description, image(url) for example) -> and username stored in local storage when loggedIn 
+- handle upload for image is bonus. 
+- handle edit and delete my post is bonus. 
+
+
+https://dummyjson.com/
+
+
+https://www.mockaroo.com/
+
+ 
