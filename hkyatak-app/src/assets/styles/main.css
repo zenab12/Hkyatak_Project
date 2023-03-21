@@ -1,8 +1,44 @@
-h1 {
+body {
+  background-color: #ddd;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: space-between;
+  gap: 20px;
+  width: 80%;
+  padding: 10px;
+  margin: auto;
+}
+form .input-container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 5px;
+  text-align: start;
+}
+form .input-container .form-group {
+  display: grid;
+  grid-template-columns: auto 3fr;
+  font-size: 16px;
+  width: 80%;
+  margin: auto;
+  background-color: #fff;
+}
+form .input-container .form-group svg {
+  width: 25px;
+  padding: 6px;
+  max-height: 100%;
+  background-color: aliceblue;
+}
+form .input-container .form-group input {
+  max-height: 100%;
   color: #15172b;
-  background-color: rgba(238, 238, 238, 0.9333333333);
-  border: 1px solid orange;
-  color: #eee;
+  border: none;
+  outline: none;
+  padding: 5px 10px;
 }
 
 /*# sourceMappingURL=main.css.map */
