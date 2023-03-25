@@ -1,0 +1,96 @@
+.Home 
+{
+background: $primary-color url("../images//Home4.png") no-repeat;
+background-size: cover;
+height: 800px;
+width:100%;
+margin-top:-25px;
+padding:20px 0px;
+position:relative ;
+overflow: hidden;
+
+// &::after
+// {
+// content: "";
+// display: block;
+// position: absolute;
+// top:33%;
+// left:62%;
+// width:100%;
+// background-image: url("../images/sward.png");
+// background-repeat: no-repeat;
+// height:1000px;
+// width:100%;
+// z-index: 1;
+// }
+
+header .container
+{
+display:grid;
+grid-template-columns: 1fr 1fr;
+justify-content: space-between;
+align-items: center;
+gap:20px;
+
+.content 
+{
+padding:220px 50px;
+
+text-align: center;
+h2 
+{
+font-size: 4rem;
+font-weight: bold;
+width:600px;
+color:#fff;
+letter-spacing: 1px;
+margin:auto;
+line-height: 6rem;
+font-weight: 500;
+text-shadow: 0px 0px 5px $light-blue;
+
+}
+p 
+{
+color:#eee;
+font-size: 1.2rem;
+max-width:500px;
+line-height: 2,7rem;
+margin:30px auto;
+text-shadow: 0px 0px 1px $light-blue;
+
+}
+
+.Buttons {
+display: flex;
+justify-content: center;
+gap:20px;
+
+button 
+{
+width:300px;
+}
+}
+
+}
+
+.image 
+{
+    display: block;
+    position: absolute;
+    top:33%;
+    left:62%;
+    width:100%;
+    background-image: url("../images/sward.png");
+    background-repeat: no-repeat;
+    height:1000px;
+    width:100%;
+    // z-index: 1;
+}
+}
+
+
+
+
+
+}
