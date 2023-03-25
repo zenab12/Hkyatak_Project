@@ -1,0 +1,52 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Hello World",
+      "author": "Alice"
+    },
+    {
+      "id": 2,
+      "title": "Welcome to React",
+      "author": "Bob"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "alice",
+      "password": "password1"
+    },
+    {
+      "id": 2,
+      "username": "bob",
+      "password": "password2"
+    },
+    {
+      "email": "Zien@gmail.com",
+      "password": "$2a$10$gnIO4Remv6SoovrwiMAw9.yndNUM7uAcYIWPVx8NxHUSSpHv2BmQe",
+      "id": 3
+    },
+    {
+      "email": "Zien123@gmail.com",
+      "password": "$2a$10$FKjRF4xeYHOhLcw1UI/KDupd/MnaTM36PR.GLixqbYfuP3TLlFgGG",
+      "username": "Zienab",
+      "address": "mANS",
+      "id": 4
+    },
+    {
+      "email": "zenab@gmail.com",
+      "password": "$2a$10$/t5x7DdmVs2FIHv7qhc9Le/NJ4IVe7oKyC6/ykm1ySwszlaCmbkqK",
+      "username": "zzz",
+      "address": "Mansoura",
+      "id": 5
+    },
+    {
+      "email": "Tarek@gmail.com",
+      "password": "$2a$10$tGtwL5F8xERLLLCrxXDQQeo6mVO6XTzwW08wLsK1K4HacsLr9LvO.",
+      "username": "Tarek",
+      "address": "Mansoura",
+      "id": 6
+    }
+  ]
+}

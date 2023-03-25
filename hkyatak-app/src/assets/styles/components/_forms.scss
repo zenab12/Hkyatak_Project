@@ -1,6 +1,3 @@
-body 
-{
-background-color: $rr;}
 form 
 {
 display: flex;
@@ -8,33 +5,79 @@ justify-content: center;
 flex-direction: column;
 align-items: space-between;
 gap:20px;
-width:80%;
-padding:10px;
-margin:auto;
+width:100%;
+margin:0px auto;
+margin-top:50px;
+
+// box-shadow:1px 1px 50px #c1bbbb;
 
 .input-container
 {
 display: flex;
 justify-content: space-between;
 flex-direction: column;
-gap:5px;
+gap:10px;
 text-align: start;
+width:90%;
+margin:auto;
+&.gender 
+{
+
+.gender-group 
+{
+
+display: flex;
+justify-content: center;
+gap:15px;
+    .form-group 
+    {
+    background-color: transparent;}
+    }
+    
+    label 
+    {
+    display: flex;}
+
+}
+
+
+label 
+{
+color:#fff;
+font-size: 1.2rem;
+font-family: 'Sedgwick Ave Display', cursive;
+font-family: 'Pirata One', cursive;
+
+img 
+
+{
+width:50px;
+cursor: pointer;
+
+}
+}
 
 .form-group{
 
 display: grid;
-grid-template-columns: auto 3fr;
+grid-template-columns:  3fr auto;
 font-size: 16px;
-width:80%;
-margin:auto;
 background-color: #fff;
+border-radius: 5px;
+// border:2px solid #fff;
 
 svg
 {
 width:25px;
 padding:6px;;
 max-height:100%;
-background-color: aliceblue;
+background-color: $primary-color;
+fill:#fff;
+border-radius: 0px 5px 5px 0px;
+cursor: pointer;
+border:2px solid#fff;
+border-left:0px;
+
 }
 input {
     max-height:100%;
@@ -42,11 +85,33 @@ input {
     border:none;
     outline:none;
     padding:5px 10px;
-    
+    border-radius: 5px 0px 0px 5px;
+    background-color: #fff;
+// border:2px solid $primary-color;
+font-family: 'Sedgwick Ave Display', cursive;
+font-size: 20px;
+
+::placeholder 
+{
+font-size:20px;
+font-family: 'Sedgwick Ave Display', cursive;
+
 }
+}
+
+}
+
+.message 
+{
+  color:red;
+  width: 100%;
 
 }
 
 }
 
+
+
+
 }
+

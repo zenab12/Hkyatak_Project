@@ -1,0 +1,116 @@
+
+div.Sign{
+    background-color:rgba(1, 1, 24, 0.914);
+    background: rgba(1, 1, 24, 0.914) url("../images/wave.svg") no-repeat;
+    background-size: contain;
+    background-position: 0% 100%;
+    font-family: 'Gajraj One', cursive;
+    font-family: 'Pirata One', cursive;
+    font-family: 'Jolly Lodger', cursive;
+    font-family: 'Sedgwick Ave Display', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 75%;
+    margin: 40px auto;
+    border-radius: 50px;
+    background: #15172b;
+    box-shadow: 20px 20px 60px #12142540, -20px -20px 60px #181b33;
+
+    .form {
+        background: #15172b;
+        border-radius: 0px 50px 50px 0px;
+
+        h1 {
+            font-size: 2.5rem;
+            color: #fff;
+            text-align: left;
+            padding-left: 30px;
+            width: 270px;
+            padding-top: 20px;
+            // border-left: 5px solid rgb(49, 52, 78);
+            // border-radius: 50px;
+            // padding:10px;
+            // background-color:#fff;
+            // color:$primary-color;
+            // margin-left: -50px;
+            // text-align: center;
+        }
+
+        p {
+            font-size: 0.9rem;
+            text-align: left;
+            color: #d1d1d1;
+            margin-top: -10px;
+            padding-left: 30px;
+
+            &.log {
+                padding-left: 0px;
+                text-align: center;
+                margin: 20px auto;
+                font-size: 15px;
+                color: #d4d3d3;
+                text-transform: capitalize;
+
+                a {
+                    color: #a09f9f;
+                }
+            }
+        }
+    }
+
+        .image {
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $primary-color;
+            border-radius: 50px 0px 0px 50px;
+            // background:#fff url("../../assets/images/start.png") no-repeat;
+            // background-color: #fff;
+            img {
+                max-width: 100%;
+            }
+        }
+    
+}
+}
+
+@media (max-width: 767px) {
+    .Sign   .container {
+    display: grid;
+        grid-template-columns: 1fr;
+        width: 90%;
+        .form {
+            border-radius: 50px 50px 0px 0px;
+            order: 1;
+        }
+        .image {
+            order: 2;
+            border-radius: 0px 0px 50px 50px;
+        }
+        
+        button 
+        {
+        font-size:20px;
+        width:180px;
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .Sign  .container {
+        width: 90%;
+    }
+}
+
+@media (min-width: 993px) and (max-width: 1200px) {
+    .Sign   .container {
+        width: 85%;
+    }
+}

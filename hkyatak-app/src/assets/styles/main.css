@@ -1,5 +1,44 @@
-body {
-  background-color: #ddd;
+@import url("https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:700");
+@import url("https://fonts.googleapis.com/css2?family=Gajraj+One&family=Jolly+Lodger&family=Pirata+One&family=Sedgwick+Ave+Display&display=swap");
+button {
+  margin: auto;
+  background-color: rgb(35, 35, 60);
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 2.3em;
+  font-family: "Sedgwick Ave Display", cursive;
+  text-decoration: none;
+  display: inline-block;
+  padding: 4px;
+  border-radius: 8px;
+  box-shadow: 0 9px 0 #15172b, 0px 9px 25px rgba(0, 0, 0, 0.7);
+  width: 260px;
+  text-align: center;
+  cursor: pointer;
+}
+button:hover {
+  box-shadow: 0 3px 0 #15172b, 0px 3px 6px rgba(0, 0, 0, 0.7);
+  position: relative;
+  top: 6px;
+}
+button.light {
+  background-color: #fff;
+  width: 150px;
+  box-shadow: 0 9px 0 #e6e6e6, 0px 9px 25px rgba(40, 40, 49, 0.7);
+  border-color: #eae7e7;
+  margin: 0px;
+}
+button.light .navLink {
+  color: #15172b;
+  font-size: 1.4rem;
+  text-decoration: none;
+  display: block;
+  padding: 5px;
+  width: 100%;
+  height: 100%;
+}
+button.light:hover {
+  box-shadow: 0 3px 0 #e6e6e6, 0px 3px 6px rgba(40, 40, 49, 0.7);
 }
 
 form {
@@ -8,30 +47,57 @@ form {
   flex-direction: column;
   align-items: space-between;
   gap: 20px;
-  width: 80%;
-  padding: 10px;
-  margin: auto;
+  width: 100%;
+  margin: 0px auto;
+  margin-top: 50px;
 }
 form .input-container {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  gap: 5px;
+  gap: 10px;
   text-align: start;
+  width: 90%;
+  margin: auto;
+}
+form .input-container.gender .gender-group {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+form .input-container.gender .gender-group .form-group {
+  background-color: transparent;
+}
+form .input-container.gender label {
+  display: flex;
+}
+form .input-container label {
+  color: #fff;
+  font-size: 1.2rem;
+  font-family: "Sedgwick Ave Display", cursive;
+  font-family: "Pirata One", cursive;
+}
+form .input-container label img {
+  width: 50px;
+  cursor: pointer;
 }
 form .input-container .form-group {
   display: grid;
-  grid-template-columns: auto 3fr;
+  grid-template-columns: 3fr auto;
   font-size: 16px;
-  width: 80%;
-  margin: auto;
   background-color: #fff;
+  border-radius: 5px;
 }
 form .input-container .form-group svg {
   width: 25px;
   padding: 6px;
   max-height: 100%;
-  background-color: aliceblue;
+  background-color: #15172b;
+  fill: #fff;
+  border-radius: 0px 5px 5px 0px;
+  cursor: pointer;
+  border: 2px solid #fff;
+  border-left: 0px;
 }
 form .input-container .form-group input {
   max-height: 100%;
@@ -39,6 +105,236 @@ form .input-container .form-group input {
   border: none;
   outline: none;
   padding: 5px 10px;
+  border-radius: 5px 0px 0px 5px;
+  background-color: #fff;
+  font-family: "Sedgwick Ave Display", cursive;
+  font-size: 20px;
+}
+form .input-container .form-group input ::placeholder {
+  font-size: 20px;
+  font-family: "Sedgwick Ave Display", cursive;
+}
+form .input-container .message {
+  color: red;
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  max-width: 100%;
+  padding: 10px 50px;
+  background: transparent;
+}
+nav h1.logo {
+  color: #fff;
+}
+nav h1.logo .navLink {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.5rem;
+  font-size: 3.5rem;
+  font-family: "Sedgwick Ave Display", cursive;
+}
+nav .active {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: "Sedgwick Ave Display", cursive;
+}
+nav ul.navbar {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 20px;
+}
+nav ul.navbar li {
+  list-style: none;
+}
+nav ul.navbar li .navLink {
+  transition: all 0.3s linear;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.5rem;
+  font-family: "Sedgwick Ave Display", cursive;
+}
+nav ul.navbar li .navLink:hover {
+  text-shadow: 0px 0px 10px #fff;
+}
+nav ul.navbar li .active {
+  transition: all 0.3s linear;
+}
+nav ul.navbar li .active:hover {
+  text-shadow: 0px 0px 10px #fff;
+}
+
+.Home {
+  background: #15172b url("../images//Home4.png") no-repeat;
+  background-size: cover;
+  height: 800px;
+  width: 100%;
+  margin-top: -25px;
+  padding: 20px 0px;
+  position: relative;
+  overflow: hidden;
+}
+.Home header .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.Home header .container .content {
+  padding: 220px 50px;
+  text-align: center;
+}
+.Home header .container .content h2 {
+  font-size: 4rem;
+  font-weight: bold;
+  width: 600px;
+  color: #fff;
+  letter-spacing: 1px;
+  margin: auto;
+  line-height: 6rem;
+  font-weight: 500;
+  text-shadow: 0px 0px 5px #c9cdf3;
+}
+.Home header .container .content p {
+  color: #eee;
+  font-size: 1.2rem;
+  max-width: 500px;
+  line-height: 2, 7rem;
+  margin: 30px auto;
+  text-shadow: 0px 0px 1px #c9cdf3;
+}
+.Home header .container .content .Buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.Home header .container .content .Buttons button {
+  width: 300px;
+}
+.Home header .container .image {
+  display: block;
+  position: absolute;
+  top: 33%;
+  left: 62%;
+  width: 100%;
+  background-image: url("../images/sward.png");
+  background-repeat: no-repeat;
+  height: 1000px;
+  width: 100%;
+}
+
+div.Sign {
+  background-color: rgba(1, 1, 24, 0.914);
+  background: rgba(1, 1, 24, 0.914) url("../images/wave.svg") no-repeat;
+  background-size: contain;
+  background-position: 0% 100%;
+  font-family: "Gajraj One", cursive;
+  font-family: "Pirata One", cursive;
+  font-family: "Jolly Lodger", cursive;
+  font-family: "Sedgwick Ave Display", cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+div.Sign .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 75%;
+  margin: 40px auto;
+  border-radius: 50px;
+  background: #15172b;
+  box-shadow: 20px 20px 60px rgba(18, 20, 37, 0.2509803922), -20px -20px 60px #181b33;
+}
+div.Sign .container .form {
+  background: #15172b;
+  border-radius: 0px 50px 50px 0px;
+}
+div.Sign .container .form h1 {
+  font-size: 2.5rem;
+  color: #fff;
+  text-align: left;
+  padding-left: 30px;
+  width: 270px;
+  padding-top: 20px;
+}
+div.Sign .container .form p {
+  font-size: 0.9rem;
+  text-align: left;
+  color: #d1d1d1;
+  margin-top: -10px;
+  padding-left: 30px;
+}
+div.Sign .container .form p.log {
+  padding-left: 0px;
+  text-align: center;
+  margin: 20px auto;
+  font-size: 15px;
+  color: #d4d3d3;
+  text-transform: capitalize;
+}
+div.Sign .container .form p.log a {
+  color: #a09f9f;
+}
+div.Sign .container .image {
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #15172b;
+  border-radius: 50px 0px 0px 50px;
+}
+div.Sign .container .image img {
+  max-width: 100%;
+}
+
+@media (max-width: 767px) {
+  .Sign .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 90%;
+  }
+  .Sign .container .form {
+    border-radius: 50px 50px 0px 0px;
+    order: 1;
+  }
+  .Sign .container .image {
+    order: 2;
+    border-radius: 0px 0px 50px 50px;
+  }
+  .Sign .container button {
+    font-size: 20px;
+    width: 180px;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .Sign .container {
+    width: 90%;
+  }
+}
+@media (min-width: 993px) and (max-width: 1200px) {
+  .Sign .container {
+    width: 85%;
+  }
+}
+div.Sign {
+  padding: 20px;
+}
+div.Sign .container {
+  display: grid;
+  margin: 0px auto;
+}
+
+body {
+  font-family: "Sedgwick Ave Display", cursive;
 }
 
 /*# sourceMappingURL=main.css.map */

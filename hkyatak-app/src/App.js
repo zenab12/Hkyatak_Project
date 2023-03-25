@@ -1,23 +1,34 @@
-import './App.css'
-import SignUp from './components/auth/sign_up.js';
+import "./App.css";
+import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
+import SignUp from "./components/auth/sign_up.js";
+import Register from "./pages/sign_up";
+import Logging from "./pages/log_in";
+import Home from "./pages/home";
+import Profile from "./pages/profile";
+import Error from "./pages/error";
 function App() {
   return (
-  
     <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-      <SignUp/>
+      {/* <Register/> */}
+      {/* <Logging /> */}
+      <BrowserRouter>
+        {/* <Header /> */}
+        <div className="">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/login" element={<Logging />} />
+            <Route path="/signup" element={<Register />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="*" element={<Error />} />
+            {/* <Route path="/about" element={<Outlet />}>
+              <Route index element={<About />} />
+              <Route path="team" element={<AboutTeam />} />
+              <Route path="company" element={<AboutCompany />} />
+            </Route> */}
+            {/* <Route path="/product/:productid/:country?" element={<Product />} /> */}
+          </Routes>
+        </div>
+      </BrowserRouter>
     </div>
   );
 }
