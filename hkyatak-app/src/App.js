@@ -6,6 +6,8 @@ import Logging from "./pages/log_in";
 import Home from "./pages/home";
 import Profile from "./pages/profile";
 import Error from "./pages/error";
+import About from "./pages/about";
+import Contact from "./pages/contact";
 function App() {
   return (
     <div className="App">
@@ -16,6 +18,8 @@ function App() {
         <div className="">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
             <Route path="/login" element={<Logging />} />
             <Route path="/signup" element={<Register />} />
             <Route path="/profile" element={<Profile />} />

@@ -1,0 +1,68 @@
+
+div.Sign.Contact
+{
+padding-top:0px;
+margin-top:-60px;
+display: flex;
+flex-direction: column;
+.container 
+{
+display: grid;
+    grid-template-columns: 1fr;
+    .form {
+        border-radius: 50px;
+        padding: 20px;
+        margin-left: -23px;
+    }
+}
+.image 
+{
+    display: none!important;
+
+}
+}
+
+@media (max-width: 767px) {
+    .Contact .container {
+    display: grid;
+        grid-template-columns: 1fr;
+        width: 90%!important;
+        .form {
+            border-radius: 50px;
+            padding: 20px;
+            margin-left: -23px;
+        }
+        .image {
+            order: 2;
+            display: none!important;
+            border-radius: 0px 0px 50px 50px;
+        }
+        
+        button 
+        {
+        font-size:20px;
+        width:180px;
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .Contact  .container {
+        width: 90%;
+    
+        .image {
+            display: none!important;
+        }
+}
+    
+}
+
+@media (min-width: 993px) and (max-width: 1200px) {
+    .Contact .container {
+        width: 85%;
+    
+    .image {
+        display: none!important;
+    }
+}
+}
