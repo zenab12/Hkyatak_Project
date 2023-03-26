@@ -118,27 +118,74 @@ form .input-container .message {
   color: red;
   width: 100%;
 }
+form textarea {
+  width: 100% !important;
+  max-width: 100%;
+  border-radius: 5px;
+}
 
 nav {
+  width: 92%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 10px;
-  max-width: 100%;
-  padding: 10px 50px;
+  gap: 20px;
+  padding: 10px 0px;
   background: transparent;
+  position: relative;
+  z-index: 200;
+  margin: auto;
 }
-nav h1.logo {
+nav ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 5px 0px;
+  gap: 20px;
+  width: 100%;
+}
+nav ul:first-of-type {
+  justify-content: space-between;
+}
+nav ul h1.logo {
   color: #fff;
 }
-nav h1.logo .navLink {
+nav ul h1.logo img {
+  width: 60px;
+  padding-left: 10px;
+}
+nav ul h1.logo .navLink {
   text-decoration: none;
   color: #fff;
   font-size: 1.5rem;
   font-size: 3.5rem;
   font-family: "Sedgwick Ave Display", cursive;
 }
-nav .active {
+nav ul img {
+  width: 40px;
+  border-radius: 50%;
+}
+nav ul .profile,
+nav ul .toggler {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding-right: 10px;
+}
+nav ul .profile img,
+nav ul .toggler img {
+  cursor: pointer;
+}
+nav ul .toggler {
+  display: none;
+  position: relative;
+}
+nav ul input {
+  display: none;
+}
+nav ul .active {
   text-decoration: none;
   color: #fff;
   font-size: 1.5rem;
@@ -146,10 +193,10 @@ nav .active {
   font-family: "Sedgwick Ave Display", cursive;
 }
 nav ul.navbar {
+  align-self: center;
   display: flex;
-  justify-content: start;
-  align-items: center;
-  gap: 20px;
+  justify-content: space-around;
+  gap: 30px;
 }
 nav ul.navbar li {
   list-style: none;
@@ -171,66 +218,114 @@ nav ul.navbar li .active:hover {
   text-shadow: 0px 0px 10px #fff;
 }
 
-.Home {
-  background: #15172b url("../images//Home4.png") no-repeat;
-  background-size: cover;
-  height: 800px;
-  width: 100%;
-  margin-top: -25px;
-  padding: 20px 0px;
-  position: relative;
-  overflow: hidden;
+@media (max-width: 767px) {
+  nav {
+    width: 98%;
+  }
+  nav ul {
+    display: flex;
+  }
+  nav ul:first-of-type {
+    justify-content: space-between;
+    gap: 0px;
+  }
+  nav ul .menu ul {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  nav ul .menu ul li {
+    border-bottom: 3px solid #fff;
+    padding: 3px 0px;
+    transition: all 0.3s linear;
+  }
+  nav ul .menu ul li:hover {
+    border-bottom: 3px solid #fff;
+    background-color: rgba(238, 238, 238, 0.9333333333);
+  }
+  nav ul .menu ul li:hover .active {
+    color: #15172b;
+  }
+  nav ul .menu ul li:hover .navLink {
+    color: #15172b;
+  }
+  nav ul .toggler {
+    display: flex;
+    cursor: pointer;
+    transition: all 0.5s linear;
+    order: 2;
+  }
+  nav ul .toggler img:last-of-type {
+    display: none;
+  }
+  nav ul .toggler img:first-of-type {
+    display: flex;
+  }
+  nav ul .profile,
+  nav ul .menu {
+    width: 100%;
+    order: 3;
+    height: 0px;
+    transition: all 0.5s linear;
+    display: none;
+    background-color: #15172b;
+    padding: 10px 0px;
+    width: 100%;
+    top: 150px;
+    position: absolute;
+  }
+  nav ul .profile ul,
+  nav ul .menu ul {
+    height: 100%;
+  }
+  nav ul .profile ul li,
+  nav ul .menu ul li {
+    width: 100%;
+    padding: 10px 0px;
+  }
+  nav ul .menu {
+    height: 100%;
+    gap: 0px;
+  }
+  nav ul .profile {
+    order: 4;
+    padding: 10px;
+    align-self: center;
+    bottom: 0px;
+    position: relative;
+    top: 180px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+  }
+  nav ul input {
+    display: flex;
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    opacity: 0;
+    z-index: 222;
+    cursor: pointer;
+  }
+  nav ul input:checked ~ li.profile {
+    order: 4;
+    height: 20px;
+    display: flex;
+  }
+  nav ul input:checked ~ li.toggler img:first-of-type {
+    display: none;
+  }
+  nav ul input:checked ~ li.toggler img:last-of-type {
+    display: flex;
+  }
+  nav ul input:checked ~ li.menu {
+    height: 220px;
+    width: 100%;
+    display: flex;
+  }
 }
-.Home header .container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-}
-.Home header .container .content {
-  padding: 220px 50px;
-  text-align: center;
-}
-.Home header .container .content h2 {
-  font-size: 4rem;
-  font-weight: bold;
-  width: 600px;
-  color: #fff;
-  letter-spacing: 1px;
-  margin: auto;
-  line-height: 6rem;
-  font-weight: 500;
-  text-shadow: 0px 0px 5px #c9cdf3;
-}
-.Home header .container .content p {
-  color: #eee;
-  font-size: 1.2rem;
-  max-width: 500px;
-  line-height: 2, 7rem;
-  margin: 30px auto;
-  text-shadow: 0px 0px 1px #c9cdf3;
-}
-.Home header .container .content .Buttons {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-.Home header .container .content .Buttons button {
-  width: 300px;
-}
-.Home header .container .image {
-  display: block;
-  position: absolute;
-  top: 33%;
-  left: 62%;
-  width: 100%;
-  background-image: url("../images/sward.png");
-  background-repeat: no-repeat;
-  height: 1000px;
-  width: 100%;
-}
-
 div.Sign {
   background-color: rgba(1, 1, 24, 0.914);
   background: rgba(1, 1, 24, 0.914) url("../images/wave.svg") no-repeat;
@@ -333,6 +428,250 @@ div.Sign .container {
   margin: 0px auto;
 }
 
+.Home {
+  background: #15172b url("../images//Home4.png") no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  width: 100%;
+  margin-top: -25px;
+  padding: 20px 0px;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 0px;
+}
+.Home header .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.Home header .container .content {
+  padding: 220px 50px;
+  padding-bottom: 0px;
+  text-align: center;
+}
+.Home header .container .content h2 {
+  font-size: 4rem;
+  font-weight: bold;
+  width: 600px;
+  color: #fff;
+  letter-spacing: 1px;
+  margin: auto;
+  line-height: 6rem;
+  font-weight: 500;
+  text-shadow: 0px 0px 5px #c9cdf3;
+}
+.Home header .container .content p {
+  color: #eee;
+  font-size: 1.2rem;
+  max-width: 500px;
+  line-height: 2, 7rem;
+  margin: 30px auto;
+  text-shadow: 0px 0px 1px #c9cdf3;
+}
+.Home header .container .content .Buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.Home header .container .content .Buttons button {
+  width: 300px;
+}
+.Home header .container .image {
+  display: block;
+  position: absolute;
+  top: 34.5%;
+  left: 62%;
+  width: 100%;
+  background-image: url("../images/sward.png");
+  background-repeat: no-repeat;
+  height: 1000px;
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  .Home header .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    gap: 20px;
+  }
+  .Home header .container .content {
+    padding: 20px 10px;
+    margin: auto;
+    max-width: 100%;
+  }
+  .Home header .container .content h2 {
+    font-size: 3rem;
+    width: 100%;
+    line-height: 4rem;
+  }
+  .Home header .container .content p {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    line-height: 2.4rem;
+  }
+  .Home header .container .content .Buttons button {
+    max-width: 300px;
+  }
+  .Home header .container .image {
+    display: flex;
+    top: 55%;
+    left: 0%;
+  }
+}
+.about {
+  background: #15172b url("../images/Home4.png");
+  background-size: cover;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 0px;
+}
+.about header .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.about header .container .content {
+  padding: 220px 50px;
+  padding-bottom: 0px;
+  text-align: center;
+}
+.about header .container .content h2 {
+  font-size: 4rem;
+  font-weight: bold;
+  width: 600px;
+  color: #fff;
+  letter-spacing: 1px;
+  margin: auto;
+  line-height: 6rem;
+  font-weight: 500;
+  text-shadow: 0px 0px 5px #d8934d;
+}
+.about header .container .content p {
+  color: #eee;
+  font-size: 1.2rem;
+  max-width: 500px;
+  line-height: 2, 7rem;
+  margin: 30px auto;
+  text-shadow: 0px 0px 1px #d8934d;
+}
+.about header .container .content .Buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.about header .container .content .Buttons button {
+  width: 300px;
+}
+.about header .container .image {
+  display: block;
+  position: absolute;
+  top: 10.5%;
+  right: -20%;
+  width: 100%;
+  background-image: url("../images/AboutV.png");
+  background-repeat: no-repeat;
+  height: 1000px;
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  .about header .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    gap: 20px;
+  }
+  .about header .container .content {
+    padding: 20px 10px;
+    margin: auto;
+    max-width: 100%;
+  }
+  .about header .container .content h2 {
+    font-size: 3rem;
+    width: 100%;
+    line-height: 4rem;
+  }
+  .about header .container .content p {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    line-height: 2.4rem;
+  }
+  .about header .container .content .Buttons button {
+    max-width: 300px;
+  }
+  .about header .container .image {
+    display: flex;
+    top: 65%;
+    right: 0%;
+    background-size: contain;
+    background-image: url("../images/ABOUTP.png");
+  }
+}
+div.Sign.Contact {
+  padding-top: 0px;
+  margin-top: -60px;
+  display: flex;
+  flex-direction: column;
+}
+div.Sign.Contact .container {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+div.Sign.Contact .container .form {
+  border-radius: 50px;
+  padding: 20px;
+  margin-left: -23px;
+}
+div.Sign.Contact .image {
+  display: none !important;
+}
+
+@media (max-width: 767px) {
+  .Contact .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 90% !important;
+  }
+  .Contact .container .form {
+    border-radius: 50px;
+    padding: 20px;
+    margin-left: -23px;
+  }
+  .Contact .container .image {
+    order: 2;
+    display: none !important;
+    border-radius: 0px 0px 50px 50px;
+  }
+  .Contact .container button {
+    font-size: 20px;
+    width: 180px;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .Contact .container {
+    width: 90%;
+  }
+  .Contact .container .image {
+    display: none !important;
+  }
+}
+@media (min-width: 993px) and (max-width: 1200px) {
+  .Contact .container {
+    width: 85%;
+  }
+  .Contact .container .image {
+    display: none !important;
+  }
+}
 body {
   font-family: "Sedgwick Ave Display", cursive;
 }
