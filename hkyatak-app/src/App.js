@@ -8,6 +8,7 @@ import Profile from "./pages/profile";
 import Error from "./pages/error";
 import About from "./pages/about";
 import Contact from "./pages/contact";
+import Feed from "./components/posts/post_feed";
 function App() {
   return (
     <div className="App">
@@ -22,6 +23,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/login" element={<Logging />} />
             <Route path="/signup" element={<Register />} />
+            <Route path="/feed" element={<Feed />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="*" element={<Error />} />
             {/* <Route path="/about" element={<Outlet />}>
