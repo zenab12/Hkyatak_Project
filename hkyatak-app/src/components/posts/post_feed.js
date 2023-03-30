@@ -1,13 +1,25 @@
 import { NavLink } from "react-router-dom";
+import { useEffect, useState } from "react";
+import axios from "axios";
+
 import Nabvar from "../common/navbar";
+
 import dots from "../../assets/images/posts/dots.svg";
 import comment from "../../assets/images/posts/comment.svg";
 import like from "../../assets/images/posts/like.svg";
 import share from "../../assets/images/posts/share.svg";
 import like2 from "../../assets/images/posts/like2.svg";
 import like3 from "../../assets/images/posts/like3.svg";
-import { useEffect, useState } from "react";
-import axios from "axios";
+import stream from "../../assets/images/posts/stream.svg";
+import badges from "../../assets/images/posts/badges.svg";
+import events from "../../assets/images/posts/events.svg";
+import groups from "../../assets/images/posts/groups.svg";
+import member from "../../assets/images/posts/member.svg";
+import overview from "../../assets/images/posts/overview.svg";
+import quests from "../../assets/images/posts/quests.svg";
+import feed from "../../assets/images/posts/feed.svg";
+import forum from "../../assets/images/posts/forum.svg";
+
 
 const Feed = () => {
   const [Posts, setPost] = useState([]);
@@ -31,8 +43,95 @@ const Feed = () => {
   console.log(Tags);
 
   return (
+  <>
+  
+  <Nabvar />
     <section className="Feed">
-      <Nabvar />
+      <aside id="navigation-widget-small" className="navigation-widget navigation-widget-desktop closed sidebar left delayed">
+    <a className="user-avatar online" href="/profile">
+    <div className="user-avatar-content hexagon image">
+                          <div
+                            className="image"
+                            style={{
+                              "background": `url(${require("../../assets/images/posts/sanaa.jpg")})`
+                            }}
+                          >
+                          </div>
+              </div>
+                        <div className="user-avatar-badge hexagon double">
+                          <div className="user-avatar-badge-border"></div>
+                          <div className="user-avatar-badge-content">
+                            <p className="user-avatar-badge-text">12</p>
+                          </div>
+                        </div>
+                        
+    </a>
+
+  
+    <ul className="menu small">
+      <li className="menu-item active">
+        <a className="menu-item-link text-tooltip-tfr" href="/feed" dataTitle="Newsfeed">
+          <div className="menu-item-link-icon icon-newsfeed active">
+              <img src={feed} alt=""/>
+          </div>
+        <div className="xm-tooltip"><p className="xm-tooltip-text">Newsfeed</p></div></a>
+      </li>
+      <li className="menu-item">
+        <a className="menu-item-link text-tooltip-tfr"  href="/feed" dataTitle="Overview" >
+        <div className="menu-item-link-icon icon-newsfeed">
+              <img src={overview} alt=""/>
+          </div>
+        <div className="xm-tooltip"><p className="xm-tooltip-text">Overview</p></div></a>
+      </li>
+      <li className="menu-item">
+        <a className="menu-item-link text-tooltip-tfr"  href="/feed" dataTitle="Groups">
+        <div className="menu-item-link-icon icon-newsfeed">
+              <img src={groups} alt=""/>
+          </div>
+        <div className="xm-tooltip"><p className="xm-tooltip-text">Groups</p></div></a>
+      </li>
+      <li className="menu-item">
+        <a className="menu-item-link text-tooltip-tfr"  href="/feed" dataTitle="Members">
+        <div className="menu-item-link-icon icon-newsfeed">
+              <img src={member} alt=""/>
+          </div>
+        <div className="xm-tooltip"><p className="xm-tooltip-text">Members</p></div></a>
+      </li>
+
+      <li className="menu-item">
+        <a className="menu-item-link text-tooltip-tfr"  href="/feed" dataTitle="Badges" >
+        <div className="menu-item-link-icon icon-newsfeed">
+              <img src={badges} alt=""/>
+          </div>
+        <div className="xm-tooltip" ><p className="xm-tooltip-text">Badges</p></div></a>
+      </li>
+
+
+      <li className="menu-item">
+        <a className="menu-item-link text-tooltip-tfr"  href="/feed" dataTitle="Streams">
+        <div className="menu-item-link-icon icon-newsfeed">
+              <img src={stream} alt=""/>
+          </div>
+        <div className="xm-tooltip"><p className="xm-tooltip-text">Streams</p></div></a>
+      </li>
+
+      <li className="menu-item">
+        <a className="menu-item-link text-tooltip-tfr" href="/feed" dataTitle="Events">
+        <div className="menu-item-link-icon icon-newsfeed">
+              <img src={events} alt=""/>
+          </div>
+        <div className="xm-tooltip"><p className="xm-tooltip-text">Events</p></div></a>
+      </li>
+
+      <li className="menu-item">
+        <a className="menu-item-link text-tooltip-tfr" href="/feed" dataTitle="Forums">
+        <div className="menu-item-link-icon icon-newsfeed">
+              <img src={forum} alt=""/>
+          </div>
+        <div className="xm-tooltip" ><p className="xm-tooltip-text">Forums</p></div></a>
+      </li>
+    </ul>
+  </aside>
       <div className="container">
         <div className="section-banner">
           <img
@@ -68,10 +167,6 @@ const Feed = () => {
                             {/* <img src={require("../../assets/images/form/viking.png")} /> */}
                           </div>
                         </div>
-
-                        <div className="user-avatar-progress"></div>
-
-                        <div className="user-avatar-progress-border"></div>
 
                         <div className="user-avatar-badge hexagon double">
                           <div className="user-avatar-badge-border"></div>
@@ -203,6 +298,7 @@ const Feed = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 
@@ -458,67 +554,67 @@ export default Feed;
               <!-- REACTION OPTIONS -->
               <div className="reaction-options reaction-options-dropdown" style="position: absolute; z-index: 9999; bottom: 54px; left: -16px; opacity: 0; visibility: hidden; transform: translate(0px, 20px); transition: transform 0.3s ease-in-out 0s, opacity 0.3s ease-in-out 0s, visibility 0.3s ease-in-out 0s;">
                 <!-- REACTION OPTION -->
-                <div className="reaction-option text-tooltip-tft" data-title="Like" style="position: relative;">
+                <div className="reaction-option text-tooltip-tft" dataTitle="Like" style="position: relative;">
                   <!-- REACTION OPTION IMAGE -->
                   <img className="reaction-option-image" src="img/reaction/like.png" alt="reaction-like">
                   <!-- /REACTION OPTION IMAGE -->
-                <div className="xm-tooltip" style="white-space: nowrap; position: absolute; z-index: 99999; top: -28px; left: 50%; margin-left: -22px; opacity: 0; visibility: hidden; transform: translate(0px, 10px); transition: all 0.3s ease-in-out 0s;"><p className="xm-tooltip-text">Like</p></div></div>
+                <div className="xm-tooltip" style="whiteSpace: nowrap; position: absolute; z-index: 99999; top: -28px; left: 50%; margin-left: -22px; opacity: 0; visibility: hidden; transform: translate(0px, 10px); transition: all 0.3s ease-in-out 0s;"><p className="xm-tooltip-text">Like</p></div></div>
                 <!-- /REACTION OPTION -->
 
                 <!-- REACTION OPTION -->
-                <div className="reaction-option text-tooltip-tft" data-title="Love" style="position: relative;">
+                <div className="reaction-option text-tooltip-tft" dataTitle="Love" style="position: relative;">
                   <!-- REACTION OPTION IMAGE -->
                   <img className="reaction-option-image" src="img/reaction/love.png" alt="reaction-love">
                   <!-- /REACTION OPTION IMAGE -->
-                <div className="xm-tooltip" style="white-space: nowrap; position: absolute; z-index: 99999; top: -28px; left: 50%; margin-left: -23.5px; opacity: 0; visibility: hidden; transform: translate(0px, 10px); transition: all 0.3s ease-in-out 0s;"><p className="xm-tooltip-text">Love</p></div></div>
+                <div className="xm-tooltip" style="whiteSpace: nowrap; position: absolute; z-index: 99999; top: -28px; left: 50%; margin-left: -23.5px; opacity: 0; visibility: hidden; transform: translate(0px, 10px); transition: all 0.3s ease-in-out 0s;"><p className="xm-tooltip-text">Love</p></div></div>
                 <!-- /REACTION OPTION -->
 
                 <!-- REACTION OPTION -->
-                <div className="reaction-option text-tooltip-tft" data-title="Dislike" style="position: relative;">
+                <div className="reaction-option text-tooltip-tft" dataTitle="Dislike" style="position: relative;">
                   <!-- REACTION OPTION IMAGE -->
                   <img className="reaction-option-image" src="img/reaction/dislike.png" alt="reaction-dislike">
                   <!-- /REACTION OPTION IMAGE -->
-                <div className="xm-tooltip" style="white-space: nowrap; position: absolute; z-index: 99999; top: -28px; left: 50%; margin-left: -28px; opacity: 0; visibility: hidden; transform: translate(0px, 10px); transition: all 0.3s ease-in-out 0s;"><p className="xm-tooltip-text">Dislike</p></div></div>
+                <div className="xm-tooltip" style="whiteSpace: nowrap; position: absolute; z-index: 99999; top: -28px; left: 50%; margin-left: -28px; opacity: 0; visibility: hidden; transform: translate(0px, 10px); transition: all 0.3s ease-in-out 0s;"><p className="xm-tooltip-text">Dislike</p></div></div>
                 <!-- /REACTION OPTION -->
 
                 <!-- REACTION OPTION -->
-                <div className="reaction-option text-tooltip-tft" data-title="Happy" style="position: relative;">
+                <div className="reaction-option text-tooltip-tft" dataTitle="Happy" style="position: relative;">
                   <!-- REACTION OPTION IMAGE -->
                   <img className="reaction-option-image" src="img/reaction/happy.png" alt="reaction-happy">
                   <!-- /REACTION OPTION IMAGE -->
-                <div className="xm-tooltip" style="white-space: nowrap; position: absolute; z-index: 99999; top: -28px; left: 50%; margin-left: -27.5px; opacity: 0; visibility: hidden; transform: translate(0px, 10px); transition: all 0.3s ease-in-out 0s;"><p className="xm-tooltip-text">Happy</p></div></div>
+                <div className="xm-tooltip" style="whiteSpace: nowrap; position: absolute; z-index: 99999; top: -28px; left: 50%; margin-left: -27.5px; opacity: 0; visibility: hidden; transform: translate(0px, 10px); transition: all 0.3s ease-in-out 0s;"><p className="xm-tooltip-text">Happy</p></div></div>
                 <!-- /REACTION OPTION -->
 
                 <!-- REACTION OPTION -->
-                <div className="reaction-option text-tooltip-tft" data-title="Funny" style="position: relative;">
+                <div className="reaction-option text-tooltip-tft" dataTitle="Funny" style="position: relative;">
                   <!-- REACTION OPTION IMAGE -->
                   <img className="reaction-option-image" src="img/reaction/funny.png" alt="reaction-funny">
                   <!-- /REACTION OPTION IMAGE -->
-                <div className="xm-tooltip" style="white-space: nowrap; position: absolute; z-index: 99999; top: -28px; left: 50%; margin-left: -27px; opacity: 0; visibility: hidden; transform: translate(0px, 10px); transition: all 0.3s ease-in-out 0s;"><p className="xm-tooltip-text">Funny</p></div></div>
+                <div className="xm-tooltip" style="whiteSpace: nowrap; position: absolute; z-index: 99999; top: -28px; left: 50%; margin-left: -27px; opacity: 0; visibility: hidden; transform: translate(0px, 10px); transition: all 0.3s ease-in-out 0s;"><p className="xm-tooltip-text">Funny</p></div></div>
                 <!-- /REACTION OPTION -->
 
                 <!-- REACTION OPTION -->
-                <div className="reaction-option text-tooltip-tft" data-title="Wow" style="position: relative;">
+                <div className="reaction-option text-tooltip-tft" dataTitle="Wow" style="position: relative;">
                   <!-- REACTION OPTION IMAGE -->
                   <img className="reaction-option-image" src="img/reaction/wow.png" alt="reaction-wow">
                   <!-- /REACTION OPTION IMAGE -->
-                <div className="xm-tooltip" style="white-space: nowrap; position: absolute; z-index: 99999; top: -28px; left: 50%; margin-left: -24px; opacity: 0; visibility: hidden; transform: translate(0px, 10px); transition: all 0.3s ease-in-out 0s;"><p className="xm-tooltip-text">Wow</p></div></div>
+                <div className="xm-tooltip" style="whiteSpace: nowrap; position: absolute; z-index: 99999; top: -28px; left: 50%; margin-left: -24px; opacity: 0; visibility: hidden; transform: translate(0px, 10px); transition: all 0.3s ease-in-out 0s;"><p className="xm-tooltip-text">Wow</p></div></div>
                 <!-- /REACTION OPTION -->
 
                 <!-- REACTION OPTION -->
-                <div className="reaction-option text-tooltip-tft" data-title="Angry" style="position: relative;">
+                <div className="reaction-option text-tooltip-tft" dataTitle="Angry" style="position: relative;">
                   <!-- REACTION OPTION IMAGE -->
                   <img className="reaction-option-image" src="img/reaction/angry.png" alt="reaction-angry">
                   <!-- /REACTION OPTION IMAGE -->
-                <div className="xm-tooltip" style="white-space: nowrap; position: absolute; z-index: 99999; top: -28px; left: 50%; margin-left: -26.5px; opacity: 0; visibility: hidden; transform: translate(0px, 10px); transition: all 0.3s ease-in-out 0s;"><p className="xm-tooltip-text">Angry</p></div></div>
+                <div className="xm-tooltip" style="whiteSpace: nowrap; position: absolute; z-index: 99999; top: -28px; left: 50%; margin-left: -26.5px; opacity: 0; visibility: hidden; transform: translate(0px, 10px); transition: all 0.3s ease-in-out 0s;"><p className="xm-tooltip-text">Angry</p></div></div>
                 <!-- /REACTION OPTION -->
 
                 <!-- REACTION OPTION -->
-                <div className="reaction-option text-tooltip-tft" data-title="Sad" style="position: relative;">
+                <div className="reaction-option text-tooltip-tft" dataTitle="Sad" style="position: relative;">
                   <!-- REACTION OPTION IMAGE -->
                   <img className="reaction-option-image" src="img/reaction/sad.png" alt="reaction-sad">
                   <!-- /REACTION OPTION IMAGE -->
-                <div className="xm-tooltip" style="white-space: nowrap; position: absolute; z-index: 99999; top: -28px; left: 50%; margin-left: -21.5px; opacity: 0; visibility: hidden; transform: translate(0px, 10px); transition: all 0.3s ease-in-out 0s;"><p className="xm-tooltip-text">Sad</p></div></div>
+                <div className="xm-tooltip" style="whiteSpace: nowrap; position: absolute; z-index: 99999; top: -28px; left: 50%; margin-left: -21.5px; opacity: 0; visibility: hidden; transform: translate(0px, 10px); transition: all 0.3s ease-in-out 0s;"><p className="xm-tooltip-text">Sad</p></div></div>
                 <!-- /REACTION OPTION -->
               </div>
               <!-- /REACTION OPTIONS --> */
