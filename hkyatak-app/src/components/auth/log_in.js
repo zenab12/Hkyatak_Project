@@ -61,6 +61,7 @@ let message ="";
             window.location.reload();
             window.location.replace("/");
             
+            
           },
           (error) => {
           message= error.response.data;
