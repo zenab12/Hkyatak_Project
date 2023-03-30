@@ -733,18 +733,20 @@ body, html {
 .Feed .container .Grid {
   margin: 20px auto;
   display: grid;
-  width: 60%;
+  width: 50%;
   margin: 50px auto;
 }
 .Feed .container .Grid .blog-box {
-  padding: 32px 0px;
+  padding: 32px 0px 0px;
   border-radius: 12px;
   background-color: #1d2333;
   box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.06);
   position: relative;
   display: flex;
   flex-direction: column;
+  margin: 30px auto;
   gap: 10px;
+  width: 100%;
 }
 .Feed .container .Grid .blog-box-top {
   padding: 0px 28px;
@@ -855,11 +857,140 @@ body, html {
   text-align: left;
   padding: 0px 28px;
 }
-.Feed .container .Grid .blog-box-mid iframe {
+.Feed .container .Grid .blog-box-mid .blog-box-status-content {
   width: 100%;
-  height: 400px;
+}
+.Feed .container .Grid .blog-box-mid .blog-box-status-content .tag-list {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+}
+.Feed .container .Grid .blog-box-mid .blog-box-status-content .tag-list li {
+  padding: 5px 15px;
+  background-color: #60428d;
+  color: #fff;
+  border-radius: 55px;
+  text-align: center;
+  transition: all 0.3s linear;
+}
+.Feed .container .Grid .blog-box-mid .blog-box-status-content .tag-list li .tag-item {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 100;
+  font-size: 0.88rem;
+  letter-spacing: 1px;
+}
+.Feed .container .Grid .blog-box-mid .blog-box-status-content .tag-list li:hover {
+  background-color: #31af38;
+}
+.Feed .container .Grid .blog-box-mid .blog-box-status-content:after {
+  display: block;
+  content: "";
+  width: 90%;
+  background-color: #262d3e;
+  height: 0.2px;
+  margin: 5px auto;
+}
+.Feed .container .Grid .blog-box-mid .iframe-wrap {
+  width: 100%;
+  height: 350px;
   outline: none;
   border: none;
+}
+.Feed .container .Grid .blog-box-mid .iframe-wrap img {
+  width: 100%;
+  height: 100%;
+}
+.Feed .container .Grid .blog-box-mid .iframe-wrap iframe {
+  outline: none;
+  border: none;
+  width: 100%;
+  height: 100%;
+}
+.Feed .container .Grid .blog-box-bottom {
+  padding: 0px;
+}
+.Feed .container .Grid .blog-box-bottom .blog-statistics {
+  margin: 0px;
+  padding: 0px 28px;
+  font-size: 0.8rem;
+  color: #dbd8d8;
+  height: auto;
+}
+.Feed .container .Grid .blog-box-bottom .blog-statistics-wrap {
+  padding: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Feed .container .Grid .blog-box-bottom .blog-statistics-wrap .likes {
+  padding: 0px;
+}
+.Feed .container .Grid .blog-box-bottom .blog-statistics-wrap .likes ul {
+  padding: 0px;
+  display: flex;
+  align-items: center;
+}
+.Feed .container .Grid .blog-box-bottom .blog-statistics-wrap .likes ul li:nth-of-type(2) {
+  position: relative;
+  left: -3px;
+}
+.Feed .container .Grid .blog-box-bottom .blog-statistics-wrap .likes ul li:last-of-type {
+  padding-left: 10px;
+}
+.Feed .container .Grid .blog-box-bottom .blog-statistics-wrap .likes ul img {
+  width: 20px;
+}
+.Feed .container .Grid .blog-box-bottom .blog-statistics-wrap .comments_share {
+  margin: 0px;
+  margin-bottom: 10px;
+  padding: 0px;
+}
+.Feed .container .Grid .blog-box-bottom .blog-statistics-wrap .comments_share ul {
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+}
+.Feed .container .Grid .blog-box-bottom .blog-statistics-wrap .comments_share ul li span {
+  color: #fff;
+  display: inline-flex;
+  padding-right: 5px;
+}
+.Feed .container .Grid .blog-box-bottom .blog-options {
+  border-top: 1px solid #2f3749;
+  background-color: #21283b;
+  padding: 20px 28px;
+  height: auto;
+  border-radius: 0px 0px 12px 12px;
+}
+.Feed .container .Grid .blog-box-bottom .blog-options .blog-option-wrap {
+  padding: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Feed .container .Grid .blog-box-bottom .blog-options .blog-option-wrap li {
+  display: flex;
+  justify-content: start;
+  gap: 10px;
+  align-items: center;
+  color: #d2d1d9;
+  cursor: pointer;
+  padding: 0px 20px;
+  border-radius: 12px;
+  transition: all 0.4s linear;
+  font-size: 0.8rem;
+}
+.Feed .container .Grid .blog-box-bottom .blog-options .blog-option-wrap li:hover {
+  background-color: #2f3749;
+  color: #5bf162;
+}
+.Feed .container .Grid .blog-box-bottom .blog-options .blog-option-wrap li img {
+  width: 25px;
 }
 
 @media screen and (max-width: 960px) {
@@ -884,6 +1015,70 @@ body, html {
     max-width: 100%;
   }
 }
+.hexagon {
+  position: relative;
+  background: #15172b !important;
+  width: 40px;
+  height: 40px;
+  border-radius: 0px !important;
+}
+
+.hexagon:before, .double:after {
+  position: absolute;
+  content: "";
+}
+
+.hexagon:before {
+  top: 4px; /* border width */
+  left: 4px; /* border width */
+  height: calc(100% - 8px); /* 100% - (2 * border width) */
+  width: calc(100% - 8px); /* 100% - (2 * border width) */
+  background: #20224d;
+}
+
+.hexagon, .hexagon:before, .double:after {
+  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.double:after {
+  top: 8px;
+  left: 8px;
+  height: calc(100% - 16px);
+  width: calc(100% - 16px);
+  background: #20224d;
+}
+
+.hexagon {
+  display: inline-block;
+  margin: 5px 10px;
+  overflow: hidden;
+}
+
+.hexagon .image {
+  position: absolute;
+  z-index: 55;
+  top: 4px; /* border width */
+  left: 4px; /* border width */
+  height: calc(100% - 8px); /* 100% - (2 * border width) */
+  width: calc(100% - 8px); /* 100% - (2 * border width) */
+  background-size: contain !important;
+  background-position: 50%;
+  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.hexagon.user-avatar-badge {
+  top: 15px;
+  left: 35px;
+}
+
+.user-avatar-badge-text {
+  position: relative;
+  z-index: 1000;
+  font-size: 0.7rem;
+}
+
 body {
   font-family: "Sedgwick Ave Display", cursive;
 }

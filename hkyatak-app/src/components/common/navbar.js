@@ -14,6 +14,7 @@ const Nabvar = () => {
           <h1 className="logo">
             <NavLink className="navLink" to="/">
             <img src={require("../../assets/images/viking3.png")} /> Hkyatak
+            {/* <img src={localStorage.getItem("ProfileImg")} /> */}
             </NavLink>
           </h1>
         </li>

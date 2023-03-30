@@ -1,7 +1,35 @@
 import { NavLink } from "react-router-dom";
-import dots from "../../assets/images/posts/dots.svg";
 import Nabvar from "../common/navbar";
+import dots from "../../assets/images/posts/dots.svg";
+import comment from "../../assets/images/posts/comment.svg";
+import like from "../../assets/images/posts/like.svg";
+import share from "../../assets/images/posts/share.svg";
+import like2 from "../../assets/images/posts/like2.svg";
+import like3 from "../../assets/images/posts/like3.svg";
+import { useEffect, useState } from "react";
+import axios from "axios";
+
 const Feed = () => {
+  const [Posts, setPost] = useState([]);
+  const [Tags, setTags] = useState([]);
+  let blogs = [];
+  let tags = [...Tags];
+  useEffect(() => {
+    const getPosts = async () => {
+      let posts = [...Posts];
+      posts = await axios.get("http://localhost:3001/posts");
+      setPost(posts.data);
+      return posts.data;
+    };
+
+    getPosts();
+    Posts.filter((post) => tags.push(post.tags));
+    setTags(tags);
+    console.log(tags)
+  }, []);
+  
+  console.log(Tags);
+
   return (
     <section className="Feed">
       <Nabvar />
@@ -19,113 +47,159 @@ const Feed = () => {
         </div>
 
         <div className="Grid">
-          <div className="blog-box">
-            <div className="blog-box-top">
-              <div className="blog-box-top-status">
-                <div className="user-status">
-                  <a className="link user-status-avatar" href="/profile">
-                    <div className="user-avatar">
-                      <div className="user-avatar-content">
-                        <div className="image">
-                          <img src={require("../../assets/images/form/viking.png")} />
+          {Posts.map((post) =>  {
+          return (
+            <div className="blog-box" key={post.id}>
+              <div className="blog-box-top">
+                <div className="blog-box-top-status">
+                  <div className="user-status">
+                    <a className="link user-status-avatar" href="/profile">
+                      <div className="user-avatar">
+                        <div className="user-avatar-content hexagon image">
+                          <div
+                            className="image"
+                            style={{
+                              // require("../../assets/images/posts/sanaa.jpg")`,"
+                              //localStorage.getItem("ProfileImg")
+                              //JSON.parse(localStorage.getItem("userToken"))?JSON.parse(localStorage.getItem("userToken")).user.imageUrl:require("../../assets/images/posts/sanaa.jpg")
+                              "background": `url(${localStorage.getItem("ProfileImg")?localStorage.getItem("ProfileImg"):require("../../assets/images/posts/sanaa.jpg")})`
+                            }}
+                          >
+                            {/* <img src={require("../../assets/images/form/viking.png")} /> */}
+                          </div>
+                        </div>
+
+                        <div className="user-avatar-progress"></div>
+
+                        <div className="user-avatar-progress-border"></div>
+
+                        <div className="user-avatar-badge hexagon double">
+                          <div className="user-avatar-badge-border"></div>
+                          <div className="user-avatar-badge-content">
+                            <p className="user-avatar-badge-text">12</p>
+                          </div>
                         </div>
                       </div>
-
-                      <div className="user-avatar-progress"></div>
-
-                      <div className="user-avatar-progress-border"></div>
-
-                      <div className="user-avatar-badge">
-                        <div className="user-avatar-badge-border"></div>
-                        <div className="user-avatar-badge-content">
-                          <p className="user-avatar-badge-text">12</p>
-                        </div>
-                      </div>
+                    </a>
+                    <div className="blog-box-status-content">
+                      <p className="user-status-title">
+                        <a className="link" href="/profile">
+                          Sanaa Abdelhamied
+                        </a>
+                        {post.title}
+                        {/* uploaded a
+                       <span>video</span> */}
+                      </p>
+                      <p className="user-status-text">2 minutes ago</p>
                     </div>
-                  </a>
-                  <div className="blog-box-status-content">
-                    <p className="user-status-title">
-                      <a className="link" href="/profile">Zien Muhammad</a> uploaded a
-                      <span>video</span>
-                    </p>
-                    <p className="user-status-text">2 minutes ago</p>
                   </div>
                 </div>
+
+                <div className="blog-box-top-settings">
+                  <div className="blog-box-top-settings-icon">
+                    <img src={dots} />
+                  </div>
+
+                  <ul className="dropdown blog-box-top-settings-dropdown">
+                    <li className="dropdown-link">Edit Post</li>
+                    <li className="dropdown-link">Delete Post</li>
+                  </ul>
+                </div>
               </div>
 
-              <div className="blog-box-top-settings">
-                <div className="blog-box-top-settings-icon">
-                  <img src={dots} />
+              <div className="blog-box-mid">
+                <p className="blog-box-status-text">
+                  {post.body}
+                </p>
+
+                <div className="iframe-wrap">
+                  {post.videoUrl ? (
+                    <iframe src={post.videoUrl}></iframe>
+                  ) : (
+                    <img src={post.imageUrl} />
+                  )}
                 </div>
 
-                <ul className="dropdown blog-box-top-settings-dropdown">
-                  <li className="dropdown-link">Edit Post</li>
-                  <li className="dropdown-link">Delete Post</li>
-                </ul>
+                <div className="blog-box-status-content">
+                  <ul className="tag-list">
+                    {
+                    typeof(post.tags) != "string"?
+                    post.tags.map((tag,ind) => (
+                      <li key={ind}>
+                        <NavLink className="tag-item" to="/feed">
+                          {tag}
+                        </NavLink>
+                      </li>)):
+                       post.tags.split(",").map((tag,ind) => (
+                        <li  key={ind}>
+                          <NavLink className="tag-item" to="/feed">
+                            {tag}
+                          </NavLink>
+                        </li>))                      
+                      }
+                  </ul>
+                </div>
+              </div>
+              <div className="blog-box-bottom">
+                <div className="blog-statistics">
+                  <ul className="blog-statistics-wrap">
+                    <li className="likes">
+                      <ul>
+                        <li className="like">
+                          <img
+                            src={require("../../assets/images/posts/like.png")}
+                          />
+                        </li>
+                        <li className="love">
+                          <img
+                            src={require("../../assets/images/posts/love.png")}
+                          />
+                        </li>
+                        <li>20</li>
+                      </ul>
+                    </li>
+
+                    <li className="comments_share">
+                      <ul>
+                        <li>
+                          <span>2</span>Comments
+                        </li>
+                        <li>
+                          <span>0</span>Shares
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+                <div className="blog-options">
+                  <ul className="blog-option-wrap">
+                    <li className="blog-option reaction-options-dropdown-trigger">
+                      {/*Like react */}
+                      <img src={like} className="blog-option-icon icon-react" />
+                      <p className="blog-option-text">React!</p>
+                    </li>
+                    <li className="blog-option">
+                      {/*comment icon */}
+                      <img
+                        src={comment}
+                        className="blog-option-icon icon-comment"
+                      />
+                      <p className="blog-option-text">Comment</p>
+                    </li>
+                    <li className="blog-option">
+                      {/*comment icon */}
+                      <img
+                        src={share}
+                        className="blog-option-icon icon-share"
+                      />
+                      <p className="blog-option-text">Share</p>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
-
-            <div className="blog-box-mid">
-              <p className="blog-box-status-text">
-                Hi to everyone! Check out my latest video of the outlaws
-                expansion for Court Striker GO. I'm really excited because my
-                last video had almost 50.000 views.
-              </p>
-
-              <div className="iframe-wrap">
-                <iframe
-                  src="https://www.youtube.com/embed/rk-wIgg9fNk"
-                  allowfullscreen=""
-                ></iframe>
-              </div>
-
-              <div className="blog-box-status-content">
-                <ul className="tag-list">
-                  <li>
-                    <NavLink className="tag-item" to="/feed">
-                      Stream
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink className="tag-item" to="/feed">
-                      StrikerGO
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink className="tag-item" to="/feed">
-                      Outlaws
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink className="tag-item" to="/feed">
-                      Gaming
-                    </NavLink>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div className="blog-box-bottom">
-            <div className="blog-options">
-              <div className="blog-option-wrap">
-                <div className="blog-option reaction-options-dropdown-trigger">
-                  {/*Like react */}
-                  <img src="" className="blog-option-icon icon-react" />
-                  <p className="blog-option-text">React!</p>
-                </div>
-                <div className="blog-option">
-                  {/*comment icon */}
-                  <img src="" className="blog-option-icon icon-comment" />
-                  <p className="blog-option-text">Comment</p>
-                </div>
-                <div className="blog-option">
-                  {/*comment icon */}
-                  <img src="" className="blog-option-icon icon-share" />
-                  <p className="blog-option-text">Share</p>
-                </div>
-              </div>
-            </div>
-          </div>
+          )})}
+          
         </div>
       </div>
     </section>

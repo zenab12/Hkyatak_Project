@@ -2,12 +2,13 @@ body ,html
 {
 height:100%
 }
+
 .Feed {
     background: $primary-color;
     width: 100%;
     min-height: 100vh;
     height:100%;
-
+    
     .container {
         width: 80%;
         margin: auto;
@@ -62,18 +63,20 @@ height:100%
         .Grid {
             margin: 20px auto;
             display: grid;
-        width:60%;
+        width:50%;
         margin:50px auto;
 
             .blog-box {
-                padding: 32px 0px;
+                padding: 32px 0px 0px;
                 border-radius: 12px;
                 background-color: #1d2333;
                 box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.06);
                 position: relative;
                 display: flex;
                 flex-direction: column;
+                margin:30px auto;
                 gap: 10px;
+                width:100%;
                 &-top {
                     padding:0px 28px;
                     display: grid;
@@ -196,9 +199,9 @@ height:100%
                 
                 &-mid 
                 {
-                
-                .blog-box-status-text 
+                .blog-box-status
                 {
+                &-text{
                  color:#e6e5e5;
                  font-size: 1rem;
                  font-weight: 100;
@@ -207,15 +210,181 @@ height:100%
                  line-height: 30px;
                  text-align: left;
                  padding:0px 28px;
-
                 }
-                
-                iframe 
+                &-content
                 {
                 width:100%;
-                height:400px;
+                .tag-list
+                {
+                    display: flex;
+                    justify-content: start;
+                    align-items: center;
+                    width:100%;
+                    gap:20px;
+                    li 
+                    {
+                    padding:5px 15px;
+                    background-color: #60428d;
+                    color:#fff;
+                    border-radius: 55px;
+                    text-align: center;
+                    transition: all .3s linear;
+
+                    ;
+                    .tag-item 
+                    {
+                    color:#fff;
+                    text-decoration: none;
+                    font-weight: 100;font-size: .88rem;
+                    letter-spacing: 1px;
+                    }
+                    &:hover 
+                    {
+                    background-color: #31af38;
+                    }
+                    }
+                }
+                &:after 
+                {
+                 display: block;
+                 content:"";
+                 width:90%;
+                 background-color: #262d3e;
+                 height:.2px;
+                 margin:5px auto;
+                }
+                }
+                }
+                
+                .iframe-wrap
+                {
+                width:100%;
+                height:350px;
                 outline: none;
                 border: none;
+                img {
+                width:100%;
+                height:100%
+                }
+                iframe{
+                    outline: none;
+                    border: none;
+                width:100%;
+                height:100%;
+            }
+               
+                }
+                }
+                
+                &-bottom
+                {
+                padding:0px;
+                .blog-statistics 
+                {
+                margin:0px;
+                    padding:0px 28px;
+                    font-size: .8rem;
+                    color:#dbd8d8;
+                    height:auto;
+                    &-wrap 
+                    {
+                    padding:0px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    
+                    .likes 
+                    {
+                        padding:0px;
+
+                      ul{
+                        padding:0px;
+                        display: flex;
+                        align-items: center;
+                        li
+                        {
+                        &:nth-of-type(2) 
+                        {
+                        position: relative;
+                        left:-3px;
+                        }
+                        &:last-of-type 
+                        {
+                        padding-left: 10px;
+                        }
+                        }
+                        img 
+                        {
+                        width:20px;
+                        }
+                    }
+                      
+                    }
+                    .comments_share 
+                    {
+                        margin:0px;
+                        margin-bottom: 10px;;
+                        padding: 0px;
+                      ul 
+                      {
+                      margin:0px;
+                      padding: 0px;
+                      display: flex;
+                      justify-content: space-between;
+                      gap:25px;
+                      li 
+                      {
+                       span{
+                        color:#fff;
+                        display: inline-flex;
+                        padding-right:5px;
+                       }
+                      }
+                      }
+                    }
+                    }
+
+                }
+                .blog-options 
+                {
+                    border-top:1px solid #2f3749;
+                    background-color: #21283b;
+                    padding:20px 28px;
+                    height:auto;
+                    
+                    border-radius: 0px 0px 12px 12px;
+                    
+                    .blog-option-wrap 
+                    {
+                    padding:0px;
+                     display: flex;
+                     justify-content: space-between;
+                     align-items: center;                     ;
+                     
+                     li 
+                     {
+                        display: flex;
+                        justify-content: start;
+                        gap:10px;
+                        align-items: center;
+                        color:#d2d1d9;
+                        cursor: pointer;
+                        padding:0px 20px;
+                        border-radius: 12px;
+                        transition: all .4s linear;
+                        font-size: .8rem;
+                        
+                        &:hover 
+                        {
+                            background-color: #2f3749;
+                            color:#5bf162;
+                        }
+                        
+                        img {
+                            width:25px;                
+                        }
+                     }
+                    }
                 }
                 }
             }
