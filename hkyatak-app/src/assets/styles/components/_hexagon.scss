@@ -1,0 +1,77 @@
+.hexagon {
+  position: relative;
+  background: $primary-color!important;
+  width:40px;
+  height:40px;
+  border-radius: 0px!important;
+}
+.hexagon:before, .double:after {
+  position: absolute;
+  content: '';
+}
+.hexagon:before {
+  top: 4px;  /* border width */
+  left: 4px;  /* border width */
+  height: calc(100% - 8px);  /* 100% - (2 * border width) */
+  width: calc(100% - 8px);  /* 100% - (2 * border width) */
+  background: #20224d;
+  // background: url("../images/posts/frame.png");
+}
+.hexagon, .hexagon:before, .double:after {
+  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.double:after {
+  top: 8px;
+  left: 8px;
+  height: calc(100% - 16px);
+  width: calc(100% - 16px);
+  background: #20224d;
+}
+
+.hexagon {
+  display: inline-block;
+  margin: 5px 10px;
+  overflow: hidden;
+
+}
+
+
+
+.hexagon .image 
+{
+// margin-top:6px;
+position: absolute;
+z-index: 55;
+// overflow: hidden;
+   top: 4px;  /* border width */
+  left: 4px;  /* border width */
+  height: calc(100% - 8px);  /* 100% - (2 * border width) */
+  width: calc(100% - 8px);  /* 100% - (2 * border width) */
+  // background: #20224d url("../images/posts/sanaa.jpg") no-repeat;
+  background-size:contain!important;
+  // background-repeat: no-repeat!important;
+  background-position: 50%;
+  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+// img 
+// {
+//   max-width:100%;
+
+// }
+}
+
+.hexagon.user-avatar-badge 
+{
+top:15px;
+left:35px;
+}
+
+.user-avatar-badge-text 
+{
+position: relative
+;
+z-index: 1000;
+font-size: .7rem;
+}

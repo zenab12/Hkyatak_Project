@@ -1,52 +1,71 @@
 {
   "posts": [
     {
-      "id": 1,
-      "title": "Hello World",
-      "author": "Alice"
+      "title": "Metaverse",
+      "body": "In science fiction, the metaverse is a hypothetical iteration of the Internet as a single, universal, and immersive virtual world that is facilitated by the use of virtual reality and augmented real…",
+      "userId": 1,
+      "imageUrl": "https://odindesignthemes.com/vikinger-dark/img/cover/04.jpg",
+      "tags": [
+        "Stream",
+        " StrikerGO",
+        "Outlaws",
+        "Gaming"
+      ],
+      "id": 1
     },
     {
-      "id": 2,
-      "title": "Welcome to React",
-      "author": "Bob"
+      "title": " Metaverse",
+      "body": "In science fiction, the metaverse is a hypothetical iteration of the Internet as a single, universal, and immersive virtual world that is facilitated by the use of virtual reality and augmented real…",
+      "videoUrl": "https://www.youtube.com/embed/rk-wIgg9fNk",
+      "userId": "2",
+      "tags": [
+        "Stream",
+        " StrikerGO",
+        "Outlaws"
+      ],
+      "id": 2
+    },
+    {
+      "title": "Secret",
+      "body": "Sorry everyone, but from now on, I will only be able to edit and upload one design tutorial per month. This happens because I'm having a lot on my plate right now and recording and editing the tutorials requiere a lot of attention.\n\n",
+      "imageUrl": "https://odindesignthemes.com/vikinger/img/cover/10.jpg",
+      "videoUrl": "",
+      "tags": "gaming,stream",
+      "id": 4
     }
   ],
   "users": [
     {
-      "id": 1,
-      "username": "alice",
-      "password": "password1"
+      "email": "Yahia@gmail.com",
+      "password": "$2a$10$HJWwxGxZ4/deD.reIZcJ0e9xyMSUgwtbv.kLKeUqlGVaSGhjlYsDa",
+      "username": "Yahia",
+      "address": "Mansoura",
+      "imageUrl": "blob:http://localhost:3000/a7a04974-22fa-4494-85dd-38af5a189a35",
+      "id": 1
     },
     {
-      "id": 2,
-      "username": "bob",
-      "password": "password2"
+      "email": "ZZ@gmail.com",
+      "password": "$2a$10$M6olY7gx/amc1vDIHID14ufVmss5lhgN2nbnIJYT7eD5dbwWKmq/O",
+      "username": "Zien",
+      "address": "Mansoura",
+      "imageUrl": "C:\\fakepath\\iti-logo.png",
+      "id": 2
     },
     {
-      "email": "Zien@gmail.com",
-      "password": "$2a$10$gnIO4Remv6SoovrwiMAw9.yndNUM7uAcYIWPVx8NxHUSSpHv2BmQe",
+      "email": "Sanaa@gmail.com",
+      "password": "$2a$10$G9/n2XZPdYFopO7CmMc7Gu7p8SIJrZfEID1FHSvp9vEcjKEqLDs8m",
+      "username": "sanaa",
+      "address": "Mansoura",
+      "imageUrl": "blob:http://localhost:3000/2e468bfc-71d5-4f8c-9717-b57c29fa9720",
       "id": 3
     },
     {
-      "email": "Zien123@gmail.com",
-      "password": "$2a$10$FKjRF4xeYHOhLcw1UI/KDupd/MnaTM36PR.GLixqbYfuP3TLlFgGG",
-      "username": "Zienab",
-      "address": "mANS",
+      "email": "Amira@gmail.com",
+      "password": "$2a$10$1dakDYOFmqaZo3glTKLlN.gTt9clSpt0qc.w8pzc0LrGXHjmjLn2e",
+      "username": "Amira",
+      "address": "Masnoura",
+      "imageUrl": "blob:http://localhost:3000/9a6b06cc-6edd-48b3-8c56-1dd40341fe69",
       "id": 4
-    },
-    {
-      "email": "zenab@gmail.com",
-      "password": "$2a$10$/t5x7DdmVs2FIHv7qhc9Le/NJ4IVe7oKyC6/ykm1ySwszlaCmbkqK",
-      "username": "zzz",
-      "address": "Mansoura",
-      "id": 5
-    },
-    {
-      "email": "Tarek@gmail.com",
-      "password": "$2a$10$tGtwL5F8xERLLLCrxXDQQeo6mVO6XTzwW08wLsK1K4HacsLr9LvO.",
-      "username": "Tarek",
-      "address": "Mansoura",
-      "id": 6
     }
   ]
 }

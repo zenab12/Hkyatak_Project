@@ -11,3 +11,73 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.upload {
+  position: relative;
+  outline: none;
+  width:90%;
+  margin:auto;
+  padding:10px;
+}
+
+.upload input {
+  position: absolute;
+  background: transparent;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  opacity: 0;
+  color: #17172c;
+  padding: 0px;
+  border-radius: 3px;
+  border: none;
+  color: #17172c;
+
+}
+
+ .upload p {
+  position: absolute;
+  z-index: 1;
+  background: #FAF5F1;
+  top: 0;
+  height: 100%;
+  left: 0;
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  padding-left: 10px !important;;
+  margin-left: -10px!important;;
+}
+form .input-container.imageUrl label 
+{
+
+margin-bottom: 10px!important;;
+}
+.upload p i {
+  font-size: 20px;
+  cursor: pointer;
+  width: 30px;
+  padding: 5px;
+  background: #17172c;
+  position: relative;
+  right: -9px;
+  height: 28px;
+  border-radius: 0px 5px 5px 0px;
+}
+div .upload p span {
+  color: #17172c;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}

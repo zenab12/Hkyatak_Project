@@ -18,12 +18,13 @@ class AuthService {
   logout() {
     localStorage.removeItem("userToken");
   }
-   signup(username, email, password,address) {
+   signup(username, email, password,address,imageUrl) {
     return  axios.post(API_URL + "/signup", {
       username,
       email,
       password,
-      address
+      address,
+      imageUrl
     });
   }
 
