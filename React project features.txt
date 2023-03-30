@@ -14,4 +14,10 @@ https://dummyjson.com/
 
 https://www.mockaroo.com/
 
+
+https://react.dev/learn/thinking-in-react
+
+https://sass-lang.com/documentation/syntax
+
+https://dummyapi.io/
  
