@@ -56,9 +56,9 @@ const  CreatePost = () => {
             <button type="submit">Create Post</button>
             </form>
           
-          <p className="log">Already Have an account <a href='#'>LogIn</a></p>
+        <p className="log">Already Have an account <a href='#'>LogIn</a></p>
     
-          </div>
+        </div>
         </div>
         </div>
       );
