@@ -831,7 +831,17 @@ html {
   position: absolute;
   left: -27px;
 }
-.Feed .container .Grid-left-aside > div.profile-Completion li.statistics ul li h1, .Feed .container .Grid-left-aside > div.profile-Completion li.statistics ul li h2, .Feed .container .Grid-left-aside > div.profile-Completion li.statistics ul li h3, .Feed .container .Grid-left-aside > div.profile-Completion li.statistics ul li h4, .Feed .container .Grid-left-aside > div.profile-Completion li.statistics ul li h5, .Feed .container .Grid-left-aside > div.profile-Completion li.statistics ul li h6, .Feed .container .Grid-right-aside > div.profile-Completion li.statistics ul li h1, .Feed .container .Grid-right-aside > div.profile-Completion li.statistics ul li h2, .Feed .container .Grid-right-aside > div.profile-Completion li.statistics ul li h3, .Feed .container .Grid-right-aside > div.profile-Completion li.statistics ul li h4, .Feed .container .Grid-right-aside > div.profile-Completion li.statistics ul li h5, .Feed .container .Grid-right-aside > div.profile-Completion li.statistics ul li h6 {
+.Feed .container .Grid-left-aside > div.profile-Completion li.statistics ul li h1,
+.Feed .container .Grid-left-aside > div.profile-Completion li.statistics ul li h2,
+.Feed .container .Grid-left-aside > div.profile-Completion li.statistics ul li h3,
+.Feed .container .Grid-left-aside > div.profile-Completion li.statistics ul li h4,
+.Feed .container .Grid-left-aside > div.profile-Completion li.statistics ul li h5,
+.Feed .container .Grid-left-aside > div.profile-Completion li.statistics ul li h6, .Feed .container .Grid-right-aside > div.profile-Completion li.statistics ul li h1,
+.Feed .container .Grid-right-aside > div.profile-Completion li.statistics ul li h2,
+.Feed .container .Grid-right-aside > div.profile-Completion li.statistics ul li h3,
+.Feed .container .Grid-right-aside > div.profile-Completion li.statistics ul li h4,
+.Feed .container .Grid-right-aside > div.profile-Completion li.statistics ul li h5,
+.Feed .container .Grid-right-aside > div.profile-Completion li.statistics ul li h6 {
   margin: 7px auto;
 }
 .Feed .container .Grid-left-aside > div.profile-Completion li.statistics ul li h3, .Feed .container .Grid-right-aside > div.profile-Completion li.statistics ul li h3 {
@@ -891,7 +901,13 @@ html {
   gap: 10px;
   align-items: center;
 }
-.Feed .container .Grid-left-aside > div.members .content-image-text .text h2, .Feed .container .Grid-left-aside > div.members .content-image-text .text h3, .Feed .container .Grid-left-aside > div.members .content-image-text .text h4, .Feed .container .Grid-left-aside > div.members .content-image-text .text p, .Feed .container .Grid-right-aside > div.members .content-image-text .text h2, .Feed .container .Grid-right-aside > div.members .content-image-text .text h3, .Feed .container .Grid-right-aside > div.members .content-image-text .text h4, .Feed .container .Grid-right-aside > div.members .content-image-text .text p {
+.Feed .container .Grid-left-aside > div.members .content-image-text .text h2,
+.Feed .container .Grid-left-aside > div.members .content-image-text .text h3,
+.Feed .container .Grid-left-aside > div.members .content-image-text .text h4,
+.Feed .container .Grid-left-aside > div.members .content-image-text .text p, .Feed .container .Grid-right-aside > div.members .content-image-text .text h2,
+.Feed .container .Grid-right-aside > div.members .content-image-text .text h3,
+.Feed .container .Grid-right-aside > div.members .content-image-text .text h4,
+.Feed .container .Grid-right-aside > div.members .content-image-text .text p {
   margin: 0px;
 }
 .Feed .container .Grid-left-aside > div.members .content-image-text .text h3, .Feed .container .Grid-right-aside > div.members .content-image-text .text h3 {
@@ -962,7 +978,13 @@ html {
 .Feed .container .Grid-left-aside > div.quests .content .image-text img, .Feed .container .Grid-right-aside > div.quests .content .image-text img {
   align-self: flex-start;
 }
-.Feed .container .Grid-left-aside > div.quests .content .image-text .text h2, .Feed .container .Grid-left-aside > div.quests .content .image-text .text h3, .Feed .container .Grid-left-aside > div.quests .content .image-text .text h4, .Feed .container .Grid-left-aside > div.quests .content .image-text .text p, .Feed .container .Grid-right-aside > div.quests .content .image-text .text h2, .Feed .container .Grid-right-aside > div.quests .content .image-text .text h3, .Feed .container .Grid-right-aside > div.quests .content .image-text .text h4, .Feed .container .Grid-right-aside > div.quests .content .image-text .text p {
+.Feed .container .Grid-left-aside > div.quests .content .image-text .text h2,
+.Feed .container .Grid-left-aside > div.quests .content .image-text .text h3,
+.Feed .container .Grid-left-aside > div.quests .content .image-text .text h4,
+.Feed .container .Grid-left-aside > div.quests .content .image-text .text p, .Feed .container .Grid-right-aside > div.quests .content .image-text .text h2,
+.Feed .container .Grid-right-aside > div.quests .content .image-text .text h3,
+.Feed .container .Grid-right-aside > div.quests .content .image-text .text h4,
+.Feed .container .Grid-right-aside > div.quests .content .image-text .text p {
   margin: 0px;
   text-align: left;
   letter-spacing: 1px;
@@ -976,7 +998,7 @@ html {
   padding: 10px 0px;
   line-height: 1.2rem;
 }
-.Feed .container .Grid-left-aside > div.quests .btn button, .Feed .container .Grid-right-aside > div.quests .btn button {
+.Feed .container .Grid-left-aside > div button, .Feed .container .Grid-right-aside > div button {
   box-shadow: none;
   background: transparent;
   border: 1px solid #31af38;
@@ -987,7 +1009,7 @@ html {
   margin: 0px auto;
   transition: all 0.3s linear;
 }
-.Feed .container .Grid-left-aside > div.quests .btn button:hover, .Feed .container .Grid-right-aside > div.quests .btn button:hover {
+.Feed .container .Grid-left-aside > div button:hover, .Feed .container .Grid-right-aside > div button:hover {
   box-shadow: none;
   top: 0;
   margin: 0px auto;
@@ -1020,6 +1042,9 @@ html {
 .Feed .container .Grid-right-aside {
   grid-area: right-aside;
 }
+.Feed .container .Grid-right-aside button {
+  margin: 5px !important;
+}
 .Feed .container .Grid-right-aside .overview {
   height: 200px;
   background: url("../images/posts/04-big.png");
@@ -1031,12 +1056,16 @@ html {
   justify-content: center;
   align-items: flex-start;
 }
-.Feed .container .Grid-right-aside .overview h2, .Feed .container .Grid-right-aside .overview h3, .Feed .container .Grid-right-aside .overview p {
+.Feed .container .Grid-right-aside .overview h2,
+.Feed .container .Grid-right-aside .overview h3,
+.Feed .container .Grid-right-aside .overview p {
   margin: 0px;
   letter-spacing: 1px;
   font-weight: 100;
 }
-.Feed .container .Grid-right-aside .overview h2 p, .Feed .container .Grid-right-aside .overview h3 p, .Feed .container .Grid-right-aside .overview p p {
+.Feed .container .Grid-right-aside .overview h2 p,
+.Feed .container .Grid-right-aside .overview h3 p,
+.Feed .container .Grid-right-aside .overview p p {
   margin: 0px;
   color: #a5b2d6;
 }
@@ -1462,6 +1491,215 @@ aside ul .menu-item-link:hover .xm-tooltip {
   transform: translate(-5px, 0px);
   opacity: 1;
   visibility: visible;
+}
+
+.calendar {
+  position: relative;
+  color: #FFF;
+  margin: 20px auto;
+  box-sizing: border-box;
+  overflow: hidden;
+  font-weight: normal;
+  border-radius: 16px;
+}
+.calendar .calendar-inner {
+  padding: 10px 10px;
+}
+.calendar .calendar-inner .calendar-today-date {
+  display: grid;
+  text-align: center;
+  cursor: pointer;
+  margin: 3px 0px;
+  background: #0f162b;
+  padding: 8px 0px;
+  border-radius: 10px;
+  width: 80%;
+  margin: auto;
+}
+.calendar .calendar-inner .calendar-body {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+}
+.calendar .calendar-inner .calendar-body div {
+  padding: 4px;
+  min-height: 30px;
+  line-height: 30px;
+  border: 1px solid transparent;
+  margin: 10px 2px 0px;
+  display: inline-block;
+}
+.calendar .calendar-inner .calendar-body div:nth-child(-n+7) {
+  border: 1px solid transparent;
+  border-bottom: 1px solid #292c35;
+}
+.calendar .calendar-inner .calendar-body div:nth-child(-n+7):hover {
+  border: 1px solid transparent;
+  border-bottom: 1px solid #292c35;
+}
+.calendar .calendar-inner .calendar-body div > a {
+  color: #FFF;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+.calendar .calendar-inner .calendar-body div:hover {
+  border: 1px solid #393d49;
+  border-radius: 4px;
+}
+.calendar .calendar-inner .calendar-body div.empty-dates:hover {
+  border: 1px solid transparent;
+}
+.calendar .calendar-inner .calendar-body .calendar-today {
+  background: linear-gradient(to bottom, #15172b, #111325);
+  border-radius: 4px;
+}
+.calendar .calendar-inner .calendar-body .calendar-today:hover {
+  border: 1px solid transparent;
+}
+.calendar .calendar-inner .calendar-body .calendar-today a {
+  outline: 2px solid transparent;
+}
+.calendar .calendar-inner .calendar-controls {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.calendar .calendar-inner .calendar-controls .calendar-next a,
+.calendar .calendar-inner .calendar-controls .calendar-prev a {
+  color: #FFF;
+  font-family: arial, consolas, sans-serif;
+  font-size: 26px;
+  text-decoration: none;
+  padding: 4px 12px;
+  display: inline-block;
+  background: transparent;
+  margin: 10px 0 10px 0;
+}
+.calendar .calendar-inner .calendar-controls .calendar-year-month {
+  display: flex;
+  min-width: 100px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.calendar .calendar-inner .calendar-controls .calendar-year-month .calendar-year-label,
+.calendar .calendar-inner .calendar-controls .calendar-year-month .calendar-month-label {
+  font-weight: 500;
+  font-size: 20px;
+}
+.calendar .calendar-inner .calendar-controls .calendar-year-month .calendar-year-label div,
+.calendar .calendar-inner .calendar-controls .calendar-year-month .calendar-month-label div {
+  display: inline-block;
+}
+.calendar .calendar-inner svg {
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+}
+.calendar .calendar-inner svg path {
+  fill: #FFF;
+}
+.calendar .calendar-inner .prev-dates,
+.calendar .calendar-inner .next-dates {
+  color: #393d49;
+}
+.calendar .calendar-inner .prev-dates:hover,
+.calendar .calendar-inner .next-dates:hover {
+  border: 1px solid transparent;
+  pointer-events: none;
+}
+
+@media screen and (max-width: 767px) {
+  body {
+    background-color: #15172b;
+  }
+  aside {
+    display: none;
+  }
+  ul {
+    flex-wrap: wrap;
+    padding: 10px;
+  }
+  .Feed .container {
+    width: 95%;
+    padding: 0px;
+  }
+  .Feed .container .section-banner {
+    margin-top: 150px;
+  }
+  .Feed .container .section-banner-title {
+    font-size: 1.5rem;
+    max-width: 100%;
+    margin-left: 70px;
+    text-align: left;
+  }
+  .Feed .container .section-banner-text {
+    margin-top: 5px;
+    font-size: 0.75rem;
+    max-width: 100%;
+    margin-left: 70px;
+    margin-top: -10px;
+  }
+  .Feed .container .Grid {
+    margin: 0px;
+    grid-template-areas: "blog blog blog";
+  }
+  .Feed .container .Grid .blog-container .blog-box-bottom .blog-options {
+    padding: 20px 0px;
+  }
+  .Feed .container .Grid-left-aside, .Feed .container .Grid-right-aside {
+    display: none;
+  }
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  nav {
+    box-sizing: border-box;
+  }
+  body {
+    background-color: #15172b;
+    overflow-x: hidden;
+  }
+  .Feed .container {
+    width: 90%;
+    padding: 0px;
+  }
+  .Feed .container .section-banner {
+    width: 92%;
+    margin: auto;
+    margin-top: 150px;
+    margin-left: 70px;
+    box-sizing: border-box;
+  }
+  .Feed .container .section-banner-title {
+    margin-left: 70px;
+    text-align: left;
+  }
+  .Feed .container .section-banner-text {
+    margin-left: 70px;
+    text-align: left;
+    margin-top: -10px;
+  }
+  .Feed .container .Grid {
+    margin: 0px;
+    padding-left: 70px;
+    grid-template-columns: 270px 1fr 1fr;
+    grid-template-areas: "left-aside blog blog" "right-aside blog blog";
+    gap: 25px;
+    box-sizing: border-box;
+  }
+  .Feed .container .Grid div.calendar {
+    padding: 0px;
+  }
+  .Feed .container .Grid .blog-container .blog-box-bottom .blog-options {
+    padding: 20px 0px;
+  }
+}
+nav {
+  box-sizing: border-box;
+}
+
+body {
+  box-sizing: border-box;
 }
 
 .hexagon {
