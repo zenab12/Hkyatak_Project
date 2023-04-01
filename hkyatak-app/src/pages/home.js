@@ -15,17 +15,14 @@ let Home = () => {
             style , then Hkyatak is best place for you .
           </p>
           <div className="Buttons">
-            <button className="light">
-              <NavLink className="navLink" to="/profile" >
+          
+              <button className="light">
+              <NavLink className="navLink" to={localStorage.getItem("userToken")?"/feed":"/login"} >
               Get Started
               </NavLink>
             </button>
-            {/* <button className="light">
-              <NavLink className="navLink" to="/about" >
-              More
-              </NavLink>
-
-            </button> */}
+            
+          
           </div>
         </div>
    <div className="image">

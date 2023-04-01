@@ -105,8 +105,10 @@ nav {
 }
 
 @media (max-width: 767px) {
+body{
     nav {
     width:98%;
+    padding-right:0px!important;
         ul {
             display: flex;
             &:first-of-type {
@@ -115,6 +117,7 @@ nav {
 
             }
             .menu {
+              
                 ul {
                     flex-direction: column;
                     justify-content: flex-start;
@@ -178,10 +181,12 @@ nav {
             .menu {
                 height: 100%;
                 gap:0px;
+                top:115px;
+               background-color: #7f5dab;
             }
             .profile {
                 order: 4;
-                padding: 10px;
+                padding: 5px;
                 align-self: center;
                 bottom: 0px;
                 position: relative;
@@ -193,7 +198,7 @@ nav {
             input {
                 display: flex;
                 position: absolute;
-                top: 70px;
+                top: 40px;
                 right: 10px;
                 width: 40px;
                 height: 40px;
@@ -223,4 +228,5 @@ nav {
             }
         }
     }
+}
 }

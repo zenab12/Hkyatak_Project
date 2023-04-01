@@ -516,10 +516,12 @@ html {
                                     font-weight: 200;
                                     font-size: 1.4rem;
                                     margin: 10px auto;
+                                    word-break: break-all;
 
                                     .link {
                                         font-size: 1rem;
                                         color: #fff;
+                                        padding-right: 10px;
                                     }
                                 }
                                 &-text {
@@ -527,6 +529,8 @@ html {
                                     font-weight: 200;
                                     font-size: 0.8rem;
                                     margin: 0px auto;
+                                    word-break: break-all;
+
                                 }
 
                                 .user-avatar {
@@ -1173,4 +1177,10 @@ body
 {
 
 box-sizing: border-box;
+}
+
+ul {
+
+max-width: 100%;
+flex-wrap: wrap;
 }

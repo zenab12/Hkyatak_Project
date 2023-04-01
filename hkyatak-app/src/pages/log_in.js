@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 import LogIn from "../components/auth/log_in";
 const Logging = () => {
   return (
@@ -15,7 +17,7 @@ const Logging = () => {
       <p>Join us today and you will be happy :) </p>
       <LogIn />
       
-      <p className="log"> Do you Haven't an account ? <a href='#'>SignUp</a></p>
+      <p className="log"> Do you Haven't an account ?  <NavLink to="/signup">SignUp</NavLink></p>
 
       </div>
     </div>

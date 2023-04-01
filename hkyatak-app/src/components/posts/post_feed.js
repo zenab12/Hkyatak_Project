@@ -20,9 +20,6 @@ import smile from "../../assets/images/posts/emoji.svg";
 
 const Feed = () => {
 
-//check the console for date click event
-//Fixed day highlight
-//Added previous month and next month view
 setTimeout(()=>{
 
   function CalendarControl() {
@@ -248,12 +245,8 @@ setTimeout(()=>{
   const calendarControl = new CalendarControl();
 },400)
 
-
-
-
   const [Posts, setPost] = useState([]);
   const [Tags, setTags] = useState([]);
-  let blogs = [];
   let tags = [...Tags];
   useEffect(() => {
     const getPosts = async () => {
@@ -268,12 +261,7 @@ setTimeout(()=>{
     setTags(tags);
     console.log(tags);
   }, []);
-
-  console.log(Tags);
-  
-  
-  
-  
+    
   return (
     <>
       <Nabvar />
@@ -287,7 +275,7 @@ setTimeout(()=>{
               <div
                 className="image"
                 style={{
-                  background: `url(${require("../../assets/images/posts/sanaa.jpg")})`,
+                  background: `url(${localStorage.getItem("ProfileImg")})`,
                 }}
               ></div>
             </div>
@@ -758,13 +746,12 @@ setTimeout(()=>{
                                     //localStorage.getItem("ProfileImg")
                                     //JSON.parse(localStorage.getItem("userToken"))?JSON.parse(localStorage.getItem("userToken")).user.imageUrl:require("../../assets/images/posts/sanaa.jpg")
                                     background: `url(${
-                                      localStorage.getItem("ProfileImg")
-                                        ? localStorage.getItem("ProfileImg")
-                                        : require("../../assets/images/posts/sanaa.jpg")
+                                      localStorage.getItem("userToken")
+                                        ? JSON.parse(localStorage.getItem("userToken")).user.imageUrl
+                                        : require("../../assets/images/posts/th.jpg")
                                     })`,
                                   }}
                                 >
-                                  {/* <img src={require("../../assets/images/form/viking.png")} /> */}
                                 </div>
                               </div>
 
@@ -779,7 +766,7 @@ setTimeout(()=>{
                           <div className="blog-box-status-content">
                             <p className="user-status-title">
                               <a className="link" href="/profile">
-                                Sanaa Abdelhamied
+                                {post.userName}
                               </a>
                               {post.title}
                               {/* uploaded a
@@ -1094,6 +1081,10 @@ setTimeout(()=>{
             </div>
           </div>
         </div>
+        
+        <button className="add">
+        <NavLink className="navLink" to="/create_post"> + </NavLink>
+        </button>
       </section>
     </>
   );

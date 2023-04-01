@@ -1,7 +1,6 @@
-
 div.Sign{
     background-color:rgba(1, 1, 24, 0.914);
-    background: rgba(1, 1, 24, 0.914) url("../images/wave.svg") no-repeat;
+    background: $primary-color url("../images/wave.svg") no-repeat;
     background-size: contain;
     background-position: 0% 100%;
     font-family: 'Gajraj One', cursive;
@@ -12,7 +11,7 @@ div.Sign{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-
+    padding-top: 50px!important;
 .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -82,17 +81,36 @@ div.Sign{
 }
 
 @media (max-width: 767px) {
-    .Sign   .container {
+    div.Sign  {
+    .container{
     display: grid;
         grid-template-columns: 1fr;
         width: 90%;
         .form {
             border-radius: 50px 50px 0px 0px;
             order: 1;
+            width:100%; 
+            box-sizing: border-box;
+            
+            .input-container 
+            {
+                box-sizing: border-box;
+                max-width: 100%;
+               margin:auto!important;
+               width:90%;
+               
+               input 
+               {
+               width:100%
+               }
+            }
         }
         .image {
             order: 2;
             border-radius: 0px 0px 50px 50px;
+            width:100%
+
+            
         }
         
         button 
@@ -102,10 +120,27 @@ div.Sign{
         }
     }
 }
+}
 
 @media (min-width: 768px) and (max-width: 992px) {
-  .Sign  .container {
-        width: 90%;
+div.Sign  .container {
+        width: 95%;
+
+        .form {            
+            .input-container 
+            {
+                box-sizing: border-box;
+                max-width: 100%;
+            margin:auto!important;
+            width:90%;
+            
+             input 
+              {
+               width:100%
+               }
+            }
+        }
+        
     }
 }
 
