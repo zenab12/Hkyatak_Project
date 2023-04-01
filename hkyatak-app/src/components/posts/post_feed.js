@@ -251,7 +251,7 @@ setTimeout(()=>{
   useEffect(() => {
     const getPosts = async () => {
       let posts = [...Posts];
-      posts = await axios.get("http://localhost:3001/posts");
+      posts = await axios.get("https://back-end-ashen.vercel.app/posts");
       setPost(posts.data);
       return posts.data;
     };

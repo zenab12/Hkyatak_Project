@@ -16,7 +16,7 @@ const  CreatePost = () => {
         const data = { title, body,imageUrl,videoUrl,tags,userName };
 
         if(data){
-        const response = await axios.post('http://localhost:3001/posts', data);
+        const response = await axios.post('https://back-end-ashen.vercel.app/posts', data);
         console.log(response.data);
         
         if(response.status == 201 || 200)
