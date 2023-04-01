@@ -1,7 +1,14 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
+import AuthService from "../../services/auth";
 
 const Nabvar = () => {
+
+function logOut()
+{
+  AuthService.logout();
+}
+
   return (
     <nav>
       <ul>
@@ -48,9 +55,9 @@ const Nabvar = () => {
         </li>
 
         <li className="profile">
-          <button className="light">
-            <NavLink className="navLink" to="/signup">
-              Register
+          <button className="light" onClick={logOut}>
+            <NavLink className="navLink" to={localStorage.getItem("userToken")?"/":"/login"}>
+            {localStorage.getItem("userToken")?"Logout":"Register"}
             </NavLink>
           </button>
           {/* <span class="name">Hello, John Doe</span>

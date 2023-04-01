@@ -3,69 +3,47 @@
     {
       "title": "Metaverse",
       "body": "In science fiction, the metaverse is a hypothetical iteration of the Internet as a single, universal, and immersive virtual world that is facilitated by the use of virtual reality and augmented real…",
-      "userId": 1,
       "imageUrl": "https://odindesignthemes.com/vikinger-dark/img/cover/04.jpg",
-      "tags": [
-        "Stream",
-        " StrikerGO",
-        "Outlaws",
-        "Gaming"
-      ],
+      "videoUrl": "",
+      "tags": "Stream,StrikerGO,Outlaws,Gaming",
+      "userName": "Khaled Tarek",
       "id": 1
     },
     {
-      "title": " Metaverse",
+      "title": "Metaverse",
       "body": "In science fiction, the metaverse is a hypothetical iteration of the Internet as a single, universal, and immersive virtual world that is facilitated by the use of virtual reality and augmented real…",
+      "imageUrl": "",
       "videoUrl": "https://www.youtube.com/embed/rk-wIgg9fNk",
-      "userId": "2",
-      "tags": [
-        "Stream",
-        " StrikerGO",
-        "Outlaws"
-      ],
+      "tags": "cartoon,gaming",
+      "userName": "Zien",
       "id": 2
     },
     {
       "title": "Secret",
-      "body": "Sorry everyone, but from now on, I will only be able to edit and upload one design tutorial per month. This happens because I'm having a lot on my plate right now and recording and editing the tutorials requiere a lot of attention.\n\n",
+      "body": "Sorry everyone, but from now on, I will only be able to edit and upload one design tutorial per month. This happens because I'm having a lot on my plate right now and recording and editing the tutorials requiere a lot of attention.\\n\\n",
       "imageUrl": "https://odindesignthemes.com/vikinger/img/cover/10.jpg",
       "videoUrl": "",
       "tags": "gaming,stream",
-      "id": 4
+      "userName": "omar",
+      "id": 3
     }
   ],
   "users": [
     {
-      "email": "Yahia@gmail.com",
-      "password": "$2a$10$HJWwxGxZ4/deD.reIZcJ0e9xyMSUgwtbv.kLKeUqlGVaSGhjlYsDa",
-      "username": "Yahia",
+      "email": "omar@gmail.com",
+      "password": "$2a$10$oA1r3eD/dOgIG/tSdwXuMOetnZPs5jgMrVnhOCZ5V9DQzOl9nUaXq",
+      "username": "omar",
       "address": "Mansoura",
-      "imageUrl": "blob:http://localhost:3000/a7a04974-22fa-4494-85dd-38af5a189a35",
+      "imageUrl": "C:\\fakepath\\iti-logo.png",
       "id": 1
     },
     {
-      "email": "ZZ@gmail.com",
-      "password": "$2a$10$M6olY7gx/amc1vDIHID14ufVmss5lhgN2nbnIJYT7eD5dbwWKmq/O",
-      "username": "Zien",
+      "email": "Yahia@gmail.com",
+      "password": "$2a$10$sjbAXM61MjhGdzg9n6NeF.wFZhyI/CYaddTnfOX8KDdHvVKrH.CZG",
+      "username": "Yahia",
       "address": "Mansoura",
-      "imageUrl": "C:\\fakepath\\iti-logo.png",
+      "imageUrl": "blob:http://localhost:3000/8e7a6a96-0f71-4807-9ab0-a3a181391455",
       "id": 2
-    },
-    {
-      "email": "Sanaa@gmail.com",
-      "password": "$2a$10$G9/n2XZPdYFopO7CmMc7Gu7p8SIJrZfEID1FHSvp9vEcjKEqLDs8m",
-      "username": "sanaa",
-      "address": "Mansoura",
-      "imageUrl": "blob:http://localhost:3000/2e468bfc-71d5-4f8c-9717-b57c29fa9720",
-      "id": 3
-    },
-    {
-      "email": "Amira@gmail.com",
-      "password": "$2a$10$1dakDYOFmqaZo3glTKLlN.gTt9clSpt0qc.w8pzc0LrGXHjmjLn2e",
-      "username": "Amira",
-      "address": "Masnoura",
-      "imageUrl": "blob:http://localhost:3000/9a6b06cc-6edd-48b3-8c56-1dd40341fe69",
-      "id": 4
     }
   ]
 }

@@ -1,5 +1,6 @@
+import { NavLink } from "react-router-dom";
 import SignUp from "../components/auth/sign_up";
-// import sign_up from "../assets/images/SignUp.svg"
+
 const Register = () => {
   return (
     <div className="Sign">
@@ -14,7 +15,7 @@ const Register = () => {
       <p>Join us today and you will be happy :) </p>
       <SignUp />
       
-      <p className="log">Already Have an account <a href='#'>LogIn</a></p>
+      <p className="log">Already Have an account <NavLink to="/login">LogIn</NavLink></p>
 
       </div>
     </div>

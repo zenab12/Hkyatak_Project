@@ -16,6 +16,33 @@ button {
   text-align: center;
   cursor: pointer;
 }
+button .navLink {
+  color: #fff;
+  font-size: 1.4rem;
+  text-decoration: none;
+  display: block;
+  padding: 5px;
+  width: 100%;
+  height: 100%;
+}
+button.add {
+  width: 50px;
+  position: fixed;
+  bottom: 20px;
+  right: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+button.add .navLink {
+  text-align: center;
+  padding: 5px 0px;
+}
+button.add:hover {
+  box-shadow: 0 3px 0 #15172b, 0px 3px 6px rgba(0, 0, 0, 0.7);
+  position: fixed;
+  bottom: 26px;
+  top: 90%;
+}
 button:hover {
   box-shadow: 0 3px 0 #15172b, 0px 3px 6px rgba(0, 0, 0, 0.7);
   position: relative;
@@ -124,6 +151,138 @@ form textarea {
   border-radius: 5px;
 }
 
+.upload {
+  position: relative;
+  margin: auto;
+  margin-left: 10px !important;
+}
+.upload input {
+  position: absolute;
+  background: transparent;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  height: 100%;
+  margin: auto;
+  cursor: pointer;
+  opacity: 0;
+  color: #17172c;
+  padding: 0px;
+  border-radius: 3px;
+  border: none;
+  color: #17172c;
+}
+.upload p {
+  margin: auto;
+  position: absolute;
+  z-index: 1;
+  background: #FAF5F1;
+  top: 0;
+  left: 0;
+  max-height: 100%;
+  height: 100%;
+  margin-left: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  padding-left: 10px !important;
+  width: 100%;
+}
+.upload p i {
+  font-size: 20px;
+  cursor: pointer;
+  width: 30px;
+  padding: 5px;
+  background: #17172c;
+  position: relative;
+  right: -9px;
+  height: 28px;
+  border-radius: 0px 5px 5px 0px;
+}
+.upload p span {
+  color: #17172c;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+.upload form .input-container.imageUrl label {
+  margin-bottom: 10px !important;
+}
+
+.upload {
+  position: relative;
+  outline: none;
+  width: 90%;
+  margin: auto;
+  padding: 10px;
+}
+
+.upload input {
+  position: absolute;
+  background: transparent;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  opacity: 0;
+  color: #17172c;
+  padding: 0px;
+  border-radius: 3px;
+  border: none;
+  color: #17172c;
+}
+
+.upload p {
+  position: absolute;
+  z-index: 1;
+  background: #FAF5F1;
+  top: 0;
+  height: 100%;
+  left: 0;
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  padding-left: 10px !important;
+  margin-left: -10px !important;
+}
+
+form .input-container.imageUrl label {
+  margin-bottom: 10px !important;
+}
+
+.upload p i {
+  font-size: 20px;
+  cursor: pointer;
+  width: 30px;
+  padding: 5px;
+  background: #17172c;
+  position: relative;
+  right: -9px;
+  height: 28px;
+  border-radius: 0px 5px 5px 0px;
+}
+
+div .upload p span {
+  color: #17172c;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
 nav {
   width: 92%;
   display: flex;
@@ -219,50 +378,51 @@ nav ul.navbar li .active:hover {
 }
 
 @media (max-width: 767px) {
-  nav {
+  body nav {
     width: 98%;
+    padding-right: 0px !important;
   }
-  nav ul {
+  body nav ul {
     display: flex;
   }
-  nav ul:first-of-type {
+  body nav ul:first-of-type {
     justify-content: space-between;
     gap: 0px;
   }
-  nav ul .menu ul {
+  body nav ul .menu ul {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
   }
-  nav ul .menu ul li {
+  body nav ul .menu ul li {
     border-bottom: 3px solid #fff;
     padding: 3px 0px;
     transition: all 0.3s linear;
   }
-  nav ul .menu ul li:hover {
+  body nav ul .menu ul li:hover {
     border-bottom: 3px solid #fff;
     background-color: rgba(238, 238, 238, 0.9333333333);
   }
-  nav ul .menu ul li:hover .active {
+  body nav ul .menu ul li:hover .active {
     color: #15172b;
   }
-  nav ul .menu ul li:hover .navLink {
+  body nav ul .menu ul li:hover .navLink {
     color: #15172b;
   }
-  nav ul .toggler {
+  body nav ul .toggler {
     display: flex;
     cursor: pointer;
     transition: all 0.5s linear;
     order: 2;
   }
-  nav ul .toggler img:last-of-type {
+  body nav ul .toggler img:last-of-type {
     display: none;
   }
-  nav ul .toggler img:first-of-type {
+  body nav ul .toggler img:first-of-type {
     display: flex;
   }
-  nav ul .profile,
-  nav ul .menu {
+  body nav ul .profile,
+  body nav ul .menu {
     width: 100%;
     order: 3;
     height: 0px;
@@ -274,22 +434,24 @@ nav ul.navbar li .active:hover {
     top: 150px;
     position: absolute;
   }
-  nav ul .profile ul,
-  nav ul .menu ul {
+  body nav ul .profile ul,
+  body nav ul .menu ul {
     height: 100%;
   }
-  nav ul .profile ul li,
-  nav ul .menu ul li {
+  body nav ul .profile ul li,
+  body nav ul .menu ul li {
     width: 100%;
     padding: 10px 0px;
   }
-  nav ul .menu {
+  body nav ul .menu {
     height: 100%;
     gap: 0px;
+    top: 115px;
+    background-color: #7f5dab;
   }
-  nav ul .profile {
+  body nav ul .profile {
     order: 4;
-    padding: 10px;
+    padding: 5px;
     align-self: center;
     bottom: 0px;
     position: relative;
@@ -298,10 +460,10 @@ nav ul.navbar li .active:hover {
     align-items: center;
     justify-content: center;
   }
-  nav ul input {
+  body nav ul input {
     display: flex;
     position: absolute;
-    top: 70px;
+    top: 40px;
     right: 10px;
     width: 40px;
     height: 40px;
@@ -309,18 +471,18 @@ nav ul.navbar li .active:hover {
     z-index: 222;
     cursor: pointer;
   }
-  nav ul input:checked ~ li.profile {
+  body nav ul input:checked ~ li.profile {
     order: 4;
     height: 20px;
     display: flex;
   }
-  nav ul input:checked ~ li.toggler img:first-of-type {
+  body nav ul input:checked ~ li.toggler img:first-of-type {
     display: none;
   }
-  nav ul input:checked ~ li.toggler img:last-of-type {
+  body nav ul input:checked ~ li.toggler img:last-of-type {
     display: flex;
   }
-  nav ul input:checked ~ li.menu {
+  body nav ul input:checked ~ li.menu {
     height: 220px;
     width: 100%;
     display: flex;
@@ -328,7 +490,7 @@ nav ul.navbar li .active:hover {
 }
 div.Sign {
   background-color: rgba(1, 1, 24, 0.914);
-  background: rgba(1, 1, 24, 0.914) url("../images/wave.svg") no-repeat;
+  background: #15172b url("../images/wave.svg") no-repeat;
   background-size: contain;
   background-position: 0% 100%;
   font-family: "Gajraj One", cursive;
@@ -339,6 +501,7 @@ div.Sign {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  padding-top: 50px !important;
 }
 div.Sign .container {
   display: grid;
@@ -392,27 +555,48 @@ div.Sign .container .image img {
 }
 
 @media (max-width: 767px) {
-  .Sign .container {
+  div.Sign .container {
     display: grid;
     grid-template-columns: 1fr;
     width: 90%;
   }
-  .Sign .container .form {
+  div.Sign .container .form {
     border-radius: 50px 50px 0px 0px;
     order: 1;
+    width: 100%;
+    box-sizing: border-box;
   }
-  .Sign .container .image {
+  div.Sign .container .form .input-container {
+    box-sizing: border-box;
+    max-width: 100%;
+    margin: auto !important;
+    width: 90%;
+  }
+  div.Sign .container .form .input-container input {
+    width: 100%;
+  }
+  div.Sign .container .image {
     order: 2;
     border-radius: 0px 0px 50px 50px;
+    width: 100%;
   }
-  .Sign .container button {
+  div.Sign .container button {
     font-size: 20px;
     width: 180px;
   }
 }
 @media (min-width: 768px) and (max-width: 992px) {
-  .Sign .container {
+  div.Sign .container {
+    width: 95%;
+  }
+  div.Sign .container .form .input-container {
+    box-sizing: border-box;
+    max-width: 100%;
+    margin: auto !important;
     width: 90%;
+  }
+  div.Sign .container .form .input-container input {
+    width: 100%;
   }
 }
 @media (min-width: 993px) and (max-width: 1200px) {
@@ -447,7 +631,7 @@ div.Sign .container {
   gap: 20px;
 }
 .Home header .container .content {
-  padding: 220px 50px;
+  padding: 350px 50px;
   padding-bottom: 0px;
   text-align: center;
 }
@@ -461,6 +645,7 @@ div.Sign .container {
   line-height: 6rem;
   font-weight: 500;
   text-shadow: 0px 0px 5px #c9cdf3;
+  text-align: left;
 }
 .Home header .container .content p {
   color: #eee;
@@ -491,6 +676,9 @@ div.Sign .container {
 }
 
 @media (max-width: 767px) {
+  .Home {
+    padding-top: 200px;
+  }
   .Home header .container {
     display: grid;
     grid-template-columns: 1fr;
@@ -502,11 +690,13 @@ div.Sign .container {
     padding: 20px 10px;
     margin: auto;
     max-width: 100%;
+    margin-bottom: 20px;
   }
   .Home header .container .content h2 {
     font-size: 3rem;
     width: 100%;
     line-height: 4rem;
+    text-align: center;
   }
   .Home header .container .content p {
     font-size: 1.2rem;
@@ -539,7 +729,7 @@ div.Sign .container {
   gap: 20px;
 }
 .about header .container .content {
-  padding: 220px 50px;
+  padding: 400px 50px;
   padding-bottom: 0px;
   text-align: center;
 }
@@ -589,6 +779,7 @@ div.Sign .container {
     grid-template-rows: 1fr 1fr;
     align-items: center;
     gap: 20px;
+    padding-top: 160px;
   }
   .about header .container .content {
     padding: 20px 10px;
@@ -617,8 +808,8 @@ div.Sign .container {
   }
 }
 div.Sign.Contact {
-  padding-top: 0px;
-  margin-top: -60px;
+  padding-top: 70px;
+  margin-top: 0px;
   display: flex;
   flex-direction: column;
 }
@@ -831,7 +1022,17 @@ html {
   position: absolute;
   left: -27px;
 }
-.Feed .container .Grid-left-aside > div.profile-Completion li.statistics ul li h1, .Feed .container .Grid-left-aside > div.profile-Completion li.statistics ul li h2, .Feed .container .Grid-left-aside > div.profile-Completion li.statistics ul li h3, .Feed .container .Grid-left-aside > div.profile-Completion li.statistics ul li h4, .Feed .container .Grid-left-aside > div.profile-Completion li.statistics ul li h5, .Feed .container .Grid-left-aside > div.profile-Completion li.statistics ul li h6, .Feed .container .Grid-right-aside > div.profile-Completion li.statistics ul li h1, .Feed .container .Grid-right-aside > div.profile-Completion li.statistics ul li h2, .Feed .container .Grid-right-aside > div.profile-Completion li.statistics ul li h3, .Feed .container .Grid-right-aside > div.profile-Completion li.statistics ul li h4, .Feed .container .Grid-right-aside > div.profile-Completion li.statistics ul li h5, .Feed .container .Grid-right-aside > div.profile-Completion li.statistics ul li h6 {
+.Feed .container .Grid-left-aside > div.profile-Completion li.statistics ul li h1,
+.Feed .container .Grid-left-aside > div.profile-Completion li.statistics ul li h2,
+.Feed .container .Grid-left-aside > div.profile-Completion li.statistics ul li h3,
+.Feed .container .Grid-left-aside > div.profile-Completion li.statistics ul li h4,
+.Feed .container .Grid-left-aside > div.profile-Completion li.statistics ul li h5,
+.Feed .container .Grid-left-aside > div.profile-Completion li.statistics ul li h6, .Feed .container .Grid-right-aside > div.profile-Completion li.statistics ul li h1,
+.Feed .container .Grid-right-aside > div.profile-Completion li.statistics ul li h2,
+.Feed .container .Grid-right-aside > div.profile-Completion li.statistics ul li h3,
+.Feed .container .Grid-right-aside > div.profile-Completion li.statistics ul li h4,
+.Feed .container .Grid-right-aside > div.profile-Completion li.statistics ul li h5,
+.Feed .container .Grid-right-aside > div.profile-Completion li.statistics ul li h6 {
   margin: 7px auto;
 }
 .Feed .container .Grid-left-aside > div.profile-Completion li.statistics ul li h3, .Feed .container .Grid-right-aside > div.profile-Completion li.statistics ul li h3 {
@@ -891,7 +1092,13 @@ html {
   gap: 10px;
   align-items: center;
 }
-.Feed .container .Grid-left-aside > div.members .content-image-text .text h2, .Feed .container .Grid-left-aside > div.members .content-image-text .text h3, .Feed .container .Grid-left-aside > div.members .content-image-text .text h4, .Feed .container .Grid-left-aside > div.members .content-image-text .text p, .Feed .container .Grid-right-aside > div.members .content-image-text .text h2, .Feed .container .Grid-right-aside > div.members .content-image-text .text h3, .Feed .container .Grid-right-aside > div.members .content-image-text .text h4, .Feed .container .Grid-right-aside > div.members .content-image-text .text p {
+.Feed .container .Grid-left-aside > div.members .content-image-text .text h2,
+.Feed .container .Grid-left-aside > div.members .content-image-text .text h3,
+.Feed .container .Grid-left-aside > div.members .content-image-text .text h4,
+.Feed .container .Grid-left-aside > div.members .content-image-text .text p, .Feed .container .Grid-right-aside > div.members .content-image-text .text h2,
+.Feed .container .Grid-right-aside > div.members .content-image-text .text h3,
+.Feed .container .Grid-right-aside > div.members .content-image-text .text h4,
+.Feed .container .Grid-right-aside > div.members .content-image-text .text p {
   margin: 0px;
 }
 .Feed .container .Grid-left-aside > div.members .content-image-text .text h3, .Feed .container .Grid-right-aside > div.members .content-image-text .text h3 {
@@ -962,7 +1169,13 @@ html {
 .Feed .container .Grid-left-aside > div.quests .content .image-text img, .Feed .container .Grid-right-aside > div.quests .content .image-text img {
   align-self: flex-start;
 }
-.Feed .container .Grid-left-aside > div.quests .content .image-text .text h2, .Feed .container .Grid-left-aside > div.quests .content .image-text .text h3, .Feed .container .Grid-left-aside > div.quests .content .image-text .text h4, .Feed .container .Grid-left-aside > div.quests .content .image-text .text p, .Feed .container .Grid-right-aside > div.quests .content .image-text .text h2, .Feed .container .Grid-right-aside > div.quests .content .image-text .text h3, .Feed .container .Grid-right-aside > div.quests .content .image-text .text h4, .Feed .container .Grid-right-aside > div.quests .content .image-text .text p {
+.Feed .container .Grid-left-aside > div.quests .content .image-text .text h2,
+.Feed .container .Grid-left-aside > div.quests .content .image-text .text h3,
+.Feed .container .Grid-left-aside > div.quests .content .image-text .text h4,
+.Feed .container .Grid-left-aside > div.quests .content .image-text .text p, .Feed .container .Grid-right-aside > div.quests .content .image-text .text h2,
+.Feed .container .Grid-right-aside > div.quests .content .image-text .text h3,
+.Feed .container .Grid-right-aside > div.quests .content .image-text .text h4,
+.Feed .container .Grid-right-aside > div.quests .content .image-text .text p {
   margin: 0px;
   text-align: left;
   letter-spacing: 1px;
@@ -976,7 +1189,7 @@ html {
   padding: 10px 0px;
   line-height: 1.2rem;
 }
-.Feed .container .Grid-left-aside > div.quests .btn button, .Feed .container .Grid-right-aside > div.quests .btn button {
+.Feed .container .Grid-left-aside > div button, .Feed .container .Grid-right-aside > div button {
   box-shadow: none;
   background: transparent;
   border: 1px solid #31af38;
@@ -987,7 +1200,7 @@ html {
   margin: 0px auto;
   transition: all 0.3s linear;
 }
-.Feed .container .Grid-left-aside > div.quests .btn button:hover, .Feed .container .Grid-right-aside > div.quests .btn button:hover {
+.Feed .container .Grid-left-aside > div button:hover, .Feed .container .Grid-right-aside > div button:hover {
   box-shadow: none;
   top: 0;
   margin: 0px auto;
@@ -1020,6 +1233,9 @@ html {
 .Feed .container .Grid-right-aside {
   grid-area: right-aside;
 }
+.Feed .container .Grid-right-aside button {
+  margin: 5px !important;
+}
 .Feed .container .Grid-right-aside .overview {
   height: 200px;
   background: url("../images/posts/04-big.png");
@@ -1031,12 +1247,16 @@ html {
   justify-content: center;
   align-items: flex-start;
 }
-.Feed .container .Grid-right-aside .overview h2, .Feed .container .Grid-right-aside .overview h3, .Feed .container .Grid-right-aside .overview p {
+.Feed .container .Grid-right-aside .overview h2,
+.Feed .container .Grid-right-aside .overview h3,
+.Feed .container .Grid-right-aside .overview p {
   margin: 0px;
   letter-spacing: 1px;
   font-weight: 100;
 }
-.Feed .container .Grid-right-aside .overview h2 p, .Feed .container .Grid-right-aside .overview h3 p, .Feed .container .Grid-right-aside .overview p p {
+.Feed .container .Grid-right-aside .overview h2 p,
+.Feed .container .Grid-right-aside .overview h3 p,
+.Feed .container .Grid-right-aside .overview p p {
   margin: 0px;
   color: #a5b2d6;
 }
@@ -1118,16 +1338,19 @@ html {
   font-weight: 200;
   font-size: 1.4rem;
   margin: 10px auto;
+  word-break: break-all;
 }
 .Feed .container .Grid .blog-container .blog-box-top-status .user-status-title .link {
   font-size: 1rem;
   color: #fff;
+  padding-right: 10px;
 }
 .Feed .container .Grid .blog-container .blog-box-top-status .user-status-text {
   color: #d6d2d2;
   font-weight: 200;
   font-size: 0.8rem;
   margin: 0px auto;
+  word-break: break-all;
 }
 .Feed .container .Grid .blog-container .blog-box-top-status .user-status .user-avatar {
   position: relative;
@@ -1464,6 +1687,220 @@ aside ul .menu-item-link:hover .xm-tooltip {
   visibility: visible;
 }
 
+.calendar {
+  position: relative;
+  color: #FFF;
+  margin: 20px auto;
+  box-sizing: border-box;
+  overflow: hidden;
+  font-weight: normal;
+  border-radius: 16px;
+}
+.calendar .calendar-inner {
+  padding: 10px 10px;
+}
+.calendar .calendar-inner .calendar-today-date {
+  display: grid;
+  text-align: center;
+  cursor: pointer;
+  margin: 3px 0px;
+  background: #0f162b;
+  padding: 8px 0px;
+  border-radius: 10px;
+  width: 80%;
+  margin: auto;
+}
+.calendar .calendar-inner .calendar-body {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+}
+.calendar .calendar-inner .calendar-body div {
+  padding: 4px;
+  min-height: 30px;
+  line-height: 30px;
+  border: 1px solid transparent;
+  margin: 10px 2px 0px;
+  display: inline-block;
+}
+.calendar .calendar-inner .calendar-body div:nth-child(-n+7) {
+  border: 1px solid transparent;
+  border-bottom: 1px solid #292c35;
+}
+.calendar .calendar-inner .calendar-body div:nth-child(-n+7):hover {
+  border: 1px solid transparent;
+  border-bottom: 1px solid #292c35;
+}
+.calendar .calendar-inner .calendar-body div > a {
+  color: #FFF;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+.calendar .calendar-inner .calendar-body div:hover {
+  border: 1px solid #393d49;
+  border-radius: 4px;
+}
+.calendar .calendar-inner .calendar-body div.empty-dates:hover {
+  border: 1px solid transparent;
+}
+.calendar .calendar-inner .calendar-body .calendar-today {
+  background: linear-gradient(to bottom, #15172b, #111325);
+  border-radius: 4px;
+}
+.calendar .calendar-inner .calendar-body .calendar-today:hover {
+  border: 1px solid transparent;
+}
+.calendar .calendar-inner .calendar-body .calendar-today a {
+  outline: 2px solid transparent;
+}
+.calendar .calendar-inner .calendar-controls {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.calendar .calendar-inner .calendar-controls .calendar-next a,
+.calendar .calendar-inner .calendar-controls .calendar-prev a {
+  color: #FFF;
+  font-family: arial, consolas, sans-serif;
+  font-size: 26px;
+  text-decoration: none;
+  padding: 4px 12px;
+  display: inline-block;
+  background: transparent;
+  margin: 10px 0 10px 0;
+}
+.calendar .calendar-inner .calendar-controls .calendar-year-month {
+  display: flex;
+  min-width: 100px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.calendar .calendar-inner .calendar-controls .calendar-year-month .calendar-year-label,
+.calendar .calendar-inner .calendar-controls .calendar-year-month .calendar-month-label {
+  font-weight: 500;
+  font-size: 20px;
+}
+.calendar .calendar-inner .calendar-controls .calendar-year-month .calendar-year-label div,
+.calendar .calendar-inner .calendar-controls .calendar-year-month .calendar-month-label div {
+  display: inline-block;
+}
+.calendar .calendar-inner svg {
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+}
+.calendar .calendar-inner svg path {
+  fill: #FFF;
+}
+.calendar .calendar-inner .prev-dates,
+.calendar .calendar-inner .next-dates {
+  color: #393d49;
+}
+.calendar .calendar-inner .prev-dates:hover,
+.calendar .calendar-inner .next-dates:hover {
+  border: 1px solid transparent;
+  pointer-events: none;
+}
+
+@media screen and (max-width: 767px) {
+  body {
+    background-color: #15172b;
+  }
+  aside {
+    display: none;
+  }
+  ul {
+    flex-wrap: wrap;
+    padding: 10px;
+  }
+  .Feed .container {
+    width: 95%;
+    padding: 0px;
+  }
+  .Feed .container .section-banner {
+    margin-top: 150px;
+  }
+  .Feed .container .section-banner-title {
+    font-size: 1.5rem;
+    max-width: 100%;
+    margin-left: 70px;
+    text-align: left;
+  }
+  .Feed .container .section-banner-text {
+    margin-top: 5px;
+    font-size: 0.75rem;
+    max-width: 100%;
+    margin-left: 70px;
+    margin-top: -10px;
+  }
+  .Feed .container .Grid {
+    margin: 0px;
+    grid-template-areas: "blog blog blog";
+  }
+  .Feed .container .Grid .blog-container .blog-box-bottom .blog-options {
+    padding: 20px 0px;
+  }
+  .Feed .container .Grid-left-aside, .Feed .container .Grid-right-aside {
+    display: none;
+  }
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  nav {
+    box-sizing: border-box;
+  }
+  body {
+    background-color: #15172b;
+    overflow-x: hidden;
+  }
+  .Feed .container {
+    width: 90%;
+    padding: 0px;
+  }
+  .Feed .container .section-banner {
+    width: 92%;
+    margin: auto;
+    margin-top: 150px;
+    margin-left: 70px;
+    box-sizing: border-box;
+  }
+  .Feed .container .section-banner-title {
+    margin-left: 70px;
+    text-align: left;
+  }
+  .Feed .container .section-banner-text {
+    margin-left: 70px;
+    text-align: left;
+    margin-top: -10px;
+  }
+  .Feed .container .Grid {
+    margin: 0px;
+    padding-left: 70px;
+    grid-template-columns: 270px 1fr 1fr;
+    grid-template-areas: "left-aside blog blog" "right-aside blog blog";
+    gap: 25px;
+    box-sizing: border-box;
+  }
+  .Feed .container .Grid div.calendar {
+    padding: 0px;
+  }
+  .Feed .container .Grid .blog-container .blog-box-bottom .blog-options {
+    padding: 20px 0px;
+  }
+}
+nav {
+  box-sizing: border-box;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+ul {
+  max-width: 100%;
+  flex-wrap: wrap;
+}
+
 .hexagon {
   position: relative;
   background: #15172b !important;
@@ -1529,6 +1966,9 @@ aside ul .menu-item-link:hover .xm-tooltip {
 }
 
 body {
+  font-family: "Sedgwick Ave Display", cursive;
+}
+body input, body textarea {
   font-family: "Sedgwick Ave Display", cursive;
 }
 
