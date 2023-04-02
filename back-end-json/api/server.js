@@ -17,17 +17,6 @@ server.use(auth);
 server.use(router);
 
 
-server.post('/posts', (req, res) => {
-  const db = router.db;
-  const { title, body,imageUrl,videoUrl,tags,userId } = req.body;
-  const id = Date.now().toString();
-  tags = tags.split(",");
-  const post = { id, title, body,imageUrl,videoUrl,tags,userId };
-  db.get('posts').push(post).write();
-  res.json(post);
-});
-
-
 server.listen(3001, () => {
     console.log('JSON Server is running')
 })
