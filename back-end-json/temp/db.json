@@ -44,6 +44,30 @@
       "address": "Mansoura",
       "imageUrl": "blob:http://localhost:3000/8e7a6a96-0f71-4807-9ab0-a3a181391455",
       "id": 2
+    },
+    {
+      "email": "ram123@gmail.com",
+      "password": "$2a$10$UXwQknsRSoLHh9GCRw8/B.snYhNLE/52.kVdxN//85Hsn9YSe//NW",
+      "username": "Ram",
+      "address": "mansoura",
+      "imageUrl": "blob:http://localhost:3000/60c93878-074d-4b11-90b0-0b56bc22a169",
+      "id": 3
+    },
+    {
+      "email": "Amir123@gmail.com",
+      "password": "$2a$10$kYSbwLSZbU8/3rg5E9uvVulSabJEu8AnWX9l7EBG7PXpnwdnVLVrO",
+      "username": "Amir",
+      "address": "Mansoura",
+      "imageUrl": "blob:http://localhost:3000/8cfb584c-d1cc-47fc-a7dc-d00e4c409623",
+      "id": 4
+    },
+    {
+      "email": "omar123456@gmail.com",
+      "password": "$2a$10$iVfrkcorbrUa1PWpC81UQOQwK68yhdhEJ.k7b5l15Exy/pEhXtPvu",
+      "username": "omar",
+      "address": "Mansoura",
+      "imageUrl": "C:\\fakepath\\iti-logo.png",
+      "id": 5
     }
   ]
 }

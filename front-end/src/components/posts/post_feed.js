@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 import Nabvar from "../common/navbar";
-
 import dots from "../../assets/images/posts/dots.svg";
 import comment from "../../assets/images/posts/comment.svg";
 import like from "../../assets/images/posts/like.svg";
@@ -251,7 +250,7 @@ setTimeout(()=>{
   useEffect(() => {
     const getPosts = async () => {
       let posts = [...Posts];
-      posts = await axios.get("https://back-end-ashen.vercel.app/posts");
+      posts = await axios.get("https://back-end-vercel-1ftq1wkfp-harity.vercel.app/posts");
       setPost(posts.data);
       return posts.data;
     };
