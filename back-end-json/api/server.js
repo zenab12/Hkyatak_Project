@@ -2,7 +2,7 @@
 const jsonServer = require("json-server");
 const auth = require("json-server-auth");
 const server = jsonServer.create();
-const router = jsonServer.router("temp/db.json");
+const router = jsonServer.router("db.json");
 const middlewares = jsonServer.defaults();
 
 
