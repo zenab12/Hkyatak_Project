@@ -13,10 +13,11 @@ const  CreatePost = () => {
         e.preventDefault();
         let userName=JSON.parse(localStorage.getItem("userToken")).user.username
         ;
-        const data = { title, body,imageUrl,videoUrl,tags,userName };
+        let userId = JSON.parse(localStorage.getItem("userToken")).user.id;
+        const data = { title, body,imageUrl,videoUrl,tags,userName,userId };
 
         if(data){
-        const response = await axios.post('https://back-end-vercel-1ftq1wkfp-harity.vercel.app/posts', data);
+        const response = await axios.post('http://localhost:3001/posts', data);
         console.log(response.data);
         
         if(response.status == 201 || 200)

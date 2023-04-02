@@ -25,19 +25,19 @@ const SignUp = () => {
   let obj={};
   
   let [img,setImg] =useState("");
-  useEffect(()=>{
-    let upload = document.querySelector(".upload input");
-    upload.addEventListener("change",(e)=>{
-      let profileImg="";
-      if(e.target.files.length !== 0){
-        profileImg = URL.createObjectURL(e.target.files[0]);
-        img = profileImg;
-        setImg(profileImg);
-        localStorage.setItem("ProfileImg",img);
-      }
-    });
+  // useEffect(()=>{
+  //   // let upload = document.querySelector(".upload input");
+  //   // upload.addEventListener("change",(e)=>{
+  //   //   let profileImg="";
+  //   //   if(e.target.files.length !== 0){
+  //   //     profileImg = URL.createObjectURL(e.target.files[0]);
+  //   //     img = profileImg;
+  //   //     setImg(profileImg);
+  //   //     localStorage.setItem("ProfileImg",img);
+  //   //   }
+  //   });
   
-  },[img]);
+  // },[img]);
   
   return (
     <Formik
@@ -117,7 +117,7 @@ const SignUp = () => {
         setTimeout(() => {
           setSubmitting(false);
         }, 400);
-        obj.imageUrl = img;
+        // obj.imageUrl = img;
         AuthService.signup(obj?.userName,obj?.email,obj?.password,obj?.address,obj?.imageUrl).then(
           (data) => {
             // window.location.reload();
@@ -316,7 +316,7 @@ const SignUp = () => {
 
           <div className="imageUrl input-container">
             <label htmlFor="imageUrl">profileImg</label>
-            <div className=" form-group upload">
+            {/* <div className=" form-group upload">
               <input
                 type="file"
                 name="imageUrl"
@@ -331,6 +331,24 @@ const SignUp = () => {
               <p> <span>{values.imageUrl?values.imageUrl:"No file choosen"}</span><i className="fa fa-upload">
               <img src={upload}></img>
               </i></p>
+            </div> */}
+            <div className="form-group">
+            <input
+                type="url"
+                name="imageUrl"
+                id="imageUrl"
+                onChange={handleChange}
+                onBlur={handleBlur}
+                // value={values.imageUrl}
+                placeholder="image"
+              
+              />
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                   <path opacity="0.4" d="M22.0206 16.8198L18.8906 9.49978C18.3206 8.15978 17.4706 7.39978 16.5006 7.34978C15.5406 7.29978 14.6106 7.96978 13.9006 9.24978L12.0006 12.6598C11.6006 13.3798 11.0306 13.8098 10.4106 13.8598C9.78063 13.9198 9.15063 13.5898 8.64063 12.9398L8.42063 12.6598C7.71063 11.7698 6.83063 11.3398 5.93063 11.4298C5.03063 11.5198 4.26063 12.1398 3.75063 13.1498L2.02063 16.5998C1.40063 17.8498 1.46063 19.2998 2.19063 20.4798C2.92063 21.6598 4.19063 22.3698 5.58063 22.3698H18.3406C19.6806 22.3698 20.9306 21.6998 21.6706 20.5798C22.4306 19.4598 22.5506 18.0498 22.0206 16.8198Z" fill="#fff"></path> 
+                   <path d="M6.96984 8.38012C8.83657 8.38012 10.3498 6.86684 10.3498 5.00012C10.3498 3.13339 8.83657 1.62012 6.96984 1.62012C5.10312 1.62012 3.58984 3.13339 3.58984 5.00012C3.58984 6.86684 5.10312 8.38012 6.96984 8.38012Z" fill="#fff"></path> </g></svg>
             </div>
             <div className="message">
               {errors.imageUrl && touched.imageUrl && errors.imageUrl}

@@ -28,12 +28,58 @@
       "id": 3
     },
     {
-      "email": "omar123456@gmail.com",
-      "password": "123456",
-      "username": "omar",
-      "address": "Mansoura",
-      "imageUrl": "C:\\fakepath\\iti-logo.png",
+      "title": "Amir elb7ar",
+      "body": "Amirty",
+      "imageUrl": "https://www.malibumakos.com/ocean-waves/",
+      "videoUrl": "",
+      "tags": [],
+      "userName": "Zienab",
       "id": 4
+    },
+    {
+      "title": "Z",
+      "body": "Ziero",
+      "imageUrl": "https://www.malibumakos.com/wp-content/uploads/2018/07/ocean-waves-1000x675-1000x675.jpg",
+      "videoUrl": "",
+      "tags": [],
+      "userName": "Zienab",
+      "id": 5
+    },
+    {
+      "id": 6,
+      "title": "amirrrrr",
+      "body": "karim",
+      "imageUrl": "",
+      "videoUrl": "",
+      "tags": ""
+    },
+    {
+      "id": 7,
+      "title": "OO",
+      "body": "000000000000",
+      "imageUrl": "",
+      "videoUrl": "",
+      "tags": ""
+    },
+    {
+      "id": 8,
+      "userName": "Amir",
+      "userId": 4,
+      "title": "Zienab3sl",
+      "body": "3EDRF44dddddddfffasdfas",
+      "imageUrl": "",
+      "videoUrl": "",
+      "tags": "Gaming,life"
+    },
+    {
+      "title": "ZIenoo",
+      "body": "zzzzzzzzz",
+      "imageUrl": "",
+      "videoUrl": "",
+      "tags": [],
+      "userName": "Amir",
+      "userId": 4,
+      "id": 9
     }
   ],
   "users": [
@@ -76,6 +122,14 @@
       "address": "Mansoura",
       "imageUrl": "C:\\fakepath\\iti-logo.png",
       "id": 5
+    },
+    {
+      "email": "Zienab@gmail.com",
+      "password": "$2a$10$V3d6Jn3mwu6AOOqj4SrTyuW7tPxC9qHg0bSioxdLmVwhXdx03IPIK",
+      "username": "Zienab",
+      "address": "mansoura",
+      "imageUrl": "blob:http://localhost:3000/b2edd99a-3e1c-42ec-ae7a-1723e79197bf",
+      "id": 6
     }
   ]
 }

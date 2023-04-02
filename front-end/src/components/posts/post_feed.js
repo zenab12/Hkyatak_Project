@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 import Nabvar from "../common/navbar";
+import EditPost from "./edit_post";
+
 import dots from "../../assets/images/posts/dots.svg";
 import comment from "../../assets/images/posts/comment.svg";
 import like from "../../assets/images/posts/like.svg";
@@ -17,8 +19,42 @@ import feed from "../../assets/images/posts/feed.svg";
 import forum from "../../assets/images/posts/forum.svg";
 import smile from "../../assets/images/posts/emoji.svg";
 
-const Feed = () => {
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
 
+function MyVerticallyCenteredModal(props) {
+  return (
+    <Modal
+      {...props}
+      size="lg"
+      aria-labelledby="contained-modal-title-vcenter"
+      centered
+    >
+      <Modal.Header closeButton>
+        <Modal.Title id="contained-modal-title-vcenter">
+          Modal heading
+        </Modal.Title>
+      </Modal.Header>
+      <Modal.Body>
+        <h4>Centered Modal</h4>
+        <p>
+          Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
+          dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
+          consectetur ac, vestibulum at eros.
+        </p>
+      </Modal.Body>
+      <Modal.Footer>
+        <Button onClick={props.onHide}>Close</Button>
+      </Modal.Footer>
+    </Modal>
+  );
+}
+
+const Feed = (props) => {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 setTimeout(()=>{
 
   function CalendarControl() {
@@ -244,13 +280,16 @@ setTimeout(()=>{
   const calendarControl = new CalendarControl();
 },400)
 
+const [selectedTag, setSelectedTag] = useState('all');
   const [Posts, setPost] = useState([]);
   const [Tags, setTags] = useState([]);
+  const [isEditing, setEdit] = useState(false);
+
   let tags = [...Tags];
   useEffect(() => {
     const getPosts = async () => {
       let posts = [...Posts];
-      posts = await axios.get("https://back-end-vercel-1ftq1wkfp-harity.vercel.app/posts");
+      posts = await axios.get("http://localhost:3001/posts");
       setPost(posts.data);
       return posts.data;
     };
@@ -258,9 +297,67 @@ setTimeout(()=>{
     getPosts();
     Posts.filter((post) => tags.push(post.tags));
     setTags(tags);
-    console.log(tags);
   }, []);
-    
+  const filteredPosts = Posts.filter(post => selectedTag === 'all' ||     
+  (post.tags?
+  typeof post.tags != "string"
+    ? post.tags.some((tag, ind) => (selectedTag == tag))
+    : post.tags.split(",").some((tag, ind) => (
+      selectedTag == tag
+      )):""));
+
+  const handleEdit = (updatedPost) => {
+    const updatedPosts = Posts.map((post) =>
+      post.id === updatedPost?.id ? updatedPost : post
+    );
+    setPost(updatedPosts);
+
+  };
+const showModal = (e)=>{
+  let Modal= e.target.parentElement.parentElement.children[1];
+  if(Modal.classList.contains('active')){
+  Modal.style.display="none";
+  }
+  else 
+  {
+    Modal.style.display="block";
+  }
+
+}
+  const showSetting = (e)=>{
+
+    let settings= e.target.parentElement.parentElement.children[1];
+    if(settings.classList.contains("active"))
+    {
+      settings.classList.remove("active");
+    }else 
+    {
+
+      settings.classList.add("active")
+    }
+    console.log(settings.classList)
+
+  }
+
+
+
+  const handleDelete = (id) => {
+    axios.delete(`http://localhost:3001/posts/${id}`)
+      .then(response => {
+        setPost(Posts.filter(post => post.id !== id));
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  };
+
+  const closeModal = (e)=>{
+    let Modal= e.target.parentElement;
+    Modal.style.display="none"
+
+  }
+
+
   return (
     <>
       <Nabvar />
@@ -724,10 +821,10 @@ setTimeout(()=>{
                 </ul>
               </div>
             </div>
-
             <div className="blog-container">
-              {Posts.map((post) => {
+              {filteredPosts?.map((post) => {
                 return (
+                  <>
                   <div className="blog-box" key={post.id}>
                     <div className="blog-box-top">
                       <div className="blog-box-top-status">
@@ -777,15 +874,31 @@ setTimeout(()=>{
                       </div>
 
                       <div className="blog-box-top-settings">
-                        <div className="blog-box-top-settings-icon">
+                       <div className="blog-box-top-settings-icon" onClick={showSetting}>
                           <img src={dots} />
                         </div>
-
                         <ul className="dropdown blog-box-top-settings-dropdown">
-                          <li className="dropdown-link">Edit Post</li>
-                          <li className="dropdown-link">Delete Post</li>
+
+                        {JSON.parse(localStorage.getItem("userToken")).user.id == post.userId?
+
+                          
+                          <>
+                          <li className="dropdown-link" onClick={handleEdit}>
+                            <span onClick={showModal}>Edit blog</span>
+                            </li>
+                            <div className="Modal"> <button className="add" onClick={closeModal}>x</button> <EditPost post={post} onEdit={handleEdit} /></div>
+
+                          <li className="dropdown-link" onClick={() => handleDelete(post.id)}>Delete blog</li>
+                          </>
+                          
+                          :
+                          
+                          <li className="dropdown-link report">Report blog</li>
+                          }
+
                         </ul>
                       </div>
+              
                     </div>
 
                     <div className="blog-box-mid">
@@ -801,7 +914,9 @@ setTimeout(()=>{
 
                       <div className="blog-box-status-content">
                         <ul className="tag-list">
-                          {typeof post.tags != "string"
+                          {
+                          post.tags?
+                          typeof post.tags != "string"
                             ? post.tags.map((tag, ind) => (
                                 <li key={ind}>
                                   <NavLink className="tag-item" to="/feed">
@@ -815,7 +930,8 @@ setTimeout(()=>{
                                     {tag}
                                   </NavLink>
                                 </li>
-                              ))}
+                              )):""
+                            }
                         </ul>
                       </div>
                     </div>
@@ -880,9 +996,11 @@ setTimeout(()=>{
                       </div>
                     </div>
                   </div>
+</>
                 );
               })}
             </div>
+           
 
             <div className="Grid-right-aside">
               <div className="overview">
@@ -899,11 +1017,10 @@ setTimeout(()=>{
 
                   <li className="content">
                     <div className="categories">
-                      <button className="category">All</button>
-                      <button className="category">Life Style</button>
-                      <button className="category">Gaming</button>
-
-                      <button className="category">Streams</button>
+                      <button style={{backgroundColor:selectedTag=="all" ?"#2af83e":"" }} className="category" onClick={() => setSelectedTag('all')}>All</button>
+                      <button style={{backgroundColor:selectedTag=="Life Style" ?"#2af83e":""}} className="category" onClick={() =>setSelectedTag('Life Style')}>Life Style</button>
+                      <button style={{backgroundColor:selectedTag=="Gaming" ?"#2af83e":""}} className="category" onClick={() => setSelectedTag('Gaming')}>Gaming</button>
+                      <button style={{backgroundColor:selectedTag=="Stream" ?"#2af83e":""}} className="category" onClick={() =>setSelectedTag('Stream')}>Streams</button>
                     </div>
                   </li>
                 </ul>
@@ -1084,6 +1201,9 @@ setTimeout(()=>{
         <button className="add">
         <NavLink className="navLink" to="/create_post"> + </NavLink>
         </button>
+
+
+
       </section>
     </>
   );

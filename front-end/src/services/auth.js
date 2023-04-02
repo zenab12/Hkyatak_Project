@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "https://back-end-vercel-1ftq1wkfp-harity.vercel.app";
+const API_URL = "http://localhost:3001";
 class AuthService {
   login(email, password) {
     return axios
@@ -19,7 +19,7 @@ class AuthService {
     localStorage.removeItem("userToken");
   }
    signup(username, email, password,address,imageUrl) {
-    return  axios.post(API_URL + "/users", {
+    return  axios.post(API_URL + "/signup", {
       username,
       email,
       password,
