@@ -19,6 +19,12 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function App() {
+  const [title, setTitle] = useState('Hkyatak');
+
+  useEffect(() => {
+    document.title = title;
+  }, [title]);
+  
   const [Posts, setPost] = useState([]);
   const [Tags, setTags] = useState([]);
   let tags = [...Tags];
@@ -51,7 +57,16 @@ function App() {
         console.log(error);
       });
   };
+const loader = document.getElementById('loader');
+if(loader){
+window.addEventListener('load', () => {
+  loader.classList.add('hidden');
+});
 
+document.addEventListener('DOMContentLoaded', () => {
+  loader.classList.remove('hidden');
+});
+}
   return (
   
     <div className="App">
@@ -61,6 +76,12 @@ function App() {
       <BrowserRouter>
         {/* <Header /> */}
         <div className="">
+        <div id="loader" className="loader-app">
+  <div className="logo"></div>
+  <div className="loading-text">Loading</div>
+  <div className="loading-bar"></div>
+</div>
+
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
@@ -68,7 +89,7 @@ function App() {
             <Route path="/login" element={<Logging />} />
             <Route path="/navbar" element={<Nabvar />}/>
             <Route path="/signup" element={<Register/>} />
-            <Route path="/feed" element={<Feed posts={Posts} Tags={Tags} handleEdit={handleEdit} handleDelete={handleDelete}/>} />
+            <Route path="/feed" element={<Feed filter="react" posts={Posts} Tags={Tags} handleEdit={handleEdit} handleDelete={handleDelete}/>} />
             <Route path="/create_post" element={<CreatePost />} />
 
             <Route path="/edit_post" element={<EditPost onEdit={handleEdit} />} />

@@ -5,8 +5,10 @@
       "body": "In science fiction, the metaverse is a hypothetical iteration of the Internet as a single, universal, and immersive virtual world that is facilitated by the use of virtual reality and augmented real…",
       "imageUrl": "https://odindesignthemes.com/vikinger-dark/img/cover/04.jpg",
       "videoUrl": "",
-      "tags": "Stream,StrikerGO,Outlaws,Gaming",
-      "userName": "Khaled Tarek",
+      "tags": "Life Style ,Outlaws,Gaming",
+      "userName": "Zien Muhammad",
+      "userId": 1,
+      "userImg": "https://dragonball.guru/wp-content/uploads/2021/03/goku-super-saiyan-god-movie-fighting-beerus-150x150.jpg",
       "id": 1
     },
     {
@@ -14,8 +16,10 @@
       "body": "In science fiction, the metaverse is a hypothetical iteration of the Internet as a single, universal, and immersive virtual world that is facilitated by the use of virtual reality and augmented real…",
       "imageUrl": "",
       "videoUrl": "https://www.youtube.com/embed/rk-wIgg9fNk",
-      "tags": "cartoon,gaming",
-      "userName": "Zien",
+      "tags": "Gaming,Stream",
+      "userName": "Zien Muhammad",
+      "userId": 1,
+      "userImg": "https://dragonball.guru/wp-content/uploads/2021/03/goku-super-saiyan-god-movie-fighting-beerus-150x150.jpg",
       "id": 2
     },
     {
@@ -23,113 +27,37 @@
       "body": "Sorry everyone, but from now on, I will only be able to edit and upload one design tutorial per month. This happens because I'm having a lot on my plate right now and recording and editing the tutorials requiere a lot of attention.\\n\\n",
       "imageUrl": "https://odindesignthemes.com/vikinger/img/cover/10.jpg",
       "videoUrl": "",
-      "tags": "gaming,stream",
-      "userName": "omar",
+      "tags": "Life Style,Gaming",
+      "userName": "Souad reda",
+      "userId": 2,
+      "userImg": "https://dragonball.guru/wp-content/uploads/2021/02/goku-ultra-instinct-150x150.png",
       "id": 3
-    },
-    {
-      "title": "Amir elb7ar",
-      "body": "Amirty",
-      "imageUrl": "https://www.malibumakos.com/ocean-waves/",
-      "videoUrl": "",
-      "tags": [],
-      "userName": "Zienab",
-      "id": 4
-    },
-    {
-      "title": "Z",
-      "body": "Ziero",
-      "imageUrl": "https://www.malibumakos.com/wp-content/uploads/2018/07/ocean-waves-1000x675-1000x675.jpg",
-      "videoUrl": "",
-      "tags": [],
-      "userName": "Zienab",
-      "id": 5
-    },
-    {
-      "id": 6,
-      "title": "amirrrrr",
-      "body": "karim",
-      "imageUrl": "",
-      "videoUrl": "",
-      "tags": ""
-    },
-    {
-      "id": 7,
-      "title": "OO",
-      "body": "000000000000",
-      "imageUrl": "",
-      "videoUrl": "",
-      "tags": ""
-    },
-    {
-      "id": 8,
-      "userName": "Amir",
-      "userId": 4,
-      "title": "Zienab3sl",
-      "body": "3EDRF44dddddddfffasdfas",
-      "imageUrl": "",
-      "videoUrl": "",
-      "tags": "Gaming,life"
-    },
-    {
-      "title": "ZIenoo",
-      "body": "zzzzzzzzz",
-      "imageUrl": "",
-      "videoUrl": "",
-      "tags": [],
-      "userName": "Amir",
-      "userId": 4,
-      "id": 9
     }
   ],
   "users": [
     {
-      "email": "omar@gmail.com",
-      "password": "$2a$10$oA1r3eD/dOgIG/tSdwXuMOetnZPs5jgMrVnhOCZ5V9DQzOl9nUaXq",
-      "username": "omar",
+      "email": "zien123@gmail.com",
+      "password": "$2a$10$B40xgywKO7ZMmj06kS/AX.YIVCcSHNpGliMvMoNR0jAiKHXrsAuqe",
+      "username": "Zien Muhammad",
       "address": "Mansoura",
-      "imageUrl": "C:\\fakepath\\iti-logo.png",
+      "imageUrl": "https://dragonball.guru/wp-content/uploads/2021/03/goku-super-saiyan-god-movie-fighting-beerus-150x150.jpg",
       "id": 1
     },
     {
-      "email": "Yahia@gmail.com",
-      "password": "$2a$10$sjbAXM61MjhGdzg9n6NeF.wFZhyI/CYaddTnfOX8KDdHvVKrH.CZG",
-      "username": "Yahia",
+      "email": "souadreda123@gmail.com",
+      "password": "$2a$10$ILSvlPcGJfcLqVFe0qrrheWgU0BSEHa0USkBN8VYSuHqdqKau1m1y",
+      "username": "Souad reda",
       "address": "Mansoura",
-      "imageUrl": "blob:http://localhost:3000/8e7a6a96-0f71-4807-9ab0-a3a181391455",
+      "imageUrl": "https://dragonball.guru/wp-content/uploads/2021/02/goku-ultra-instinct-150x150.png",
       "id": 2
     },
     {
-      "email": "ram123@gmail.com",
-      "password": "$2a$10$UXwQknsRSoLHh9GCRw8/B.snYhNLE/52.kVdxN//85Hsn9YSe//NW",
-      "username": "Ram",
-      "address": "mansoura",
-      "imageUrl": "blob:http://localhost:3000/60c93878-074d-4b11-90b0-0b56bc22a169",
+      "email": "Sanaa123@gmail.com",
+      "password": "$2a$10$JLObParV05gshelP1D62NeOk/yg0zlinxWxE02kUHfRpCX8uo6r8i",
+      "username": "Sanaa Abdelhamid",
+      "address": "Mansoura",
+      "imageUrl": "https://i1.feedspot.com/5489751.jpg?t=1673240069",
       "id": 3
-    },
-    {
-      "email": "Amir123@gmail.com",
-      "password": "$2a$10$kYSbwLSZbU8/3rg5E9uvVulSabJEu8AnWX9l7EBG7PXpnwdnVLVrO",
-      "username": "Amir",
-      "address": "Mansoura",
-      "imageUrl": "blob:http://localhost:3000/8cfb584c-d1cc-47fc-a7dc-d00e4c409623",
-      "id": 4
-    },
-    {
-      "email": "omar123456@gmail.com",
-      "password": "$2a$10$iVfrkcorbrUa1PWpC81UQOQwK68yhdhEJ.k7b5l15Exy/pEhXtPvu",
-      "username": "omar",
-      "address": "Mansoura",
-      "imageUrl": "C:\\fakepath\\iti-logo.png",
-      "id": 5
-    },
-    {
-      "email": "Zienab@gmail.com",
-      "password": "$2a$10$V3d6Jn3mwu6AOOqj4SrTyuW7tPxC9qHg0bSioxdLmVwhXdx03IPIK",
-      "username": "Zienab",
-      "address": "mansoura",
-      "imageUrl": "blob:http://localhost:3000/b2edd99a-3e1c-42ec-ae7a-1723e79197bf",
-      "id": 6
     }
   ]
 }

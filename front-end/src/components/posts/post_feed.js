@@ -22,39 +22,7 @@ import smile from "../../assets/images/posts/emoji.svg";
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
-function MyVerticallyCenteredModal(props) {
-  return (
-    <Modal
-      {...props}
-      size="lg"
-      aria-labelledby="contained-modal-title-vcenter"
-      centered
-    >
-      <Modal.Header closeButton>
-        <Modal.Title id="contained-modal-title-vcenter">
-          Modal heading
-        </Modal.Title>
-      </Modal.Header>
-      <Modal.Body>
-        <h4>Centered Modal</h4>
-        <p>
-          Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-          dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
-          consectetur ac, vestibulum at eros.
-        </p>
-      </Modal.Body>
-      <Modal.Footer>
-        <Button onClick={props.onHide}>Close</Button>
-      </Modal.Footer>
-    </Modal>
-  );
-}
-
-const Feed = (props) => {
-  const [show, setShow] = useState(false);
-
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+const Feed = ({filter}) => {
 setTimeout(()=>{
 
   function CalendarControl() {
@@ -284,8 +252,18 @@ const [selectedTag, setSelectedTag] = useState('all');
   const [Posts, setPost] = useState([]);
   const [Tags, setTags] = useState([]);
   const [isEditing, setEdit] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+
 
   let tags = [...Tags];
+  const filteredPosts = Posts.filter(post => selectedTag === 'all' ||     
+  (post.tags?
+  typeof post.tags != "string"
+    ? post.tags.some((tag, ind) => (selectedTag == tag))
+    : post.tags.split(",").some((tag, ind) => (
+      selectedTag == tag
+      )):""));
+
   useEffect(() => {
     const getPosts = async () => {
       let posts = [...Posts];
@@ -297,15 +275,16 @@ const [selectedTag, setSelectedTag] = useState('all');
     getPosts();
     Posts.filter((post) => tags.push(post.tags));
     setTags(tags);
-  }, []);
-  const filteredPosts = Posts.filter(post => selectedTag === 'all' ||     
-  (post.tags?
-  typeof post.tags != "string"
-    ? post.tags.some((tag, ind) => (selectedTag == tag))
-    : post.tags.split(",").some((tag, ind) => (
-      selectedTag == tag
-      )):""));
+  }, [filter]);
 
+ 
+  if(selectedTag)
+  {
+    setTimeout(()=>{
+      setIsLoading(false);
+
+    },200)
+  }
   const handleEdit = (updatedPost) => {
     const updatedPosts = Posts.map((post) =>
       post.id === updatedPost?.id ? updatedPost : post
@@ -354,13 +333,13 @@ const showModal = (e)=>{
   const closeModal = (e)=>{
     let Modal= e.target.parentElement;
     Modal.style.display="none"
-
   }
 
 
   return (
     <>
       <Nabvar />
+    
       <section className="Feed">
         <aside
           id="navigation-widget-small"
@@ -371,7 +350,7 @@ const showModal = (e)=>{
               <div
                 className="image"
                 style={{
-                  background: `url(${localStorage.getItem("ProfileImg")})`,
+                  background: `url(${JSON.parse(localStorage.getItem("userToken")).user.imageUrl})`,
                 }}
               ></div>
             </div>
@@ -521,7 +500,7 @@ const showModal = (e)=>{
                   <li className="image">59%</li>
                   <li className="content">
                     <h2 className="content-heading">profile completion</h2>
-                    <p className="content-title">Noor Atia</p>
+                    <p className="content-title"> {JSON.parse(localStorage.getItem("userToken")).user.userName} </p>
                     <p className="content-text">
                       Complete your profile by filling profile info fields,
                       completing quests & unlocking badges
@@ -821,8 +800,14 @@ const showModal = (e)=>{
                 </ul>
               </div>
             </div>
+
+            { 
+            isLoading?<div className="loader_post">
+              <div className="loader"></div>
+            </div>:
+
             <div className="blog-container">
-              {filteredPosts?.map((post) => {
+              {filteredPosts?.map((post) => { 
                 return (
                   <>
                   <div className="blog-box" key={post.id}>
@@ -842,9 +827,8 @@ const showModal = (e)=>{
                                     //localStorage.getItem("ProfileImg")
                                     //JSON.parse(localStorage.getItem("userToken"))?JSON.parse(localStorage.getItem("userToken")).user.imageUrl:require("../../assets/images/posts/sanaa.jpg")
                                     background: `url(${
-                                      localStorage.getItem("userToken")
-                                        ? JSON.parse(localStorage.getItem("userToken")).user.imageUrl
-                                        : require("../../assets/images/posts/th.jpg")
+                                      post.userImg
+  
                                     })`,
                                   }}
                                 >
@@ -886,7 +870,11 @@ const showModal = (e)=>{
                           <li className="dropdown-link" onClick={handleEdit}>
                             <span onClick={showModal}>Edit blog</span>
                             </li>
-                            <div className="Modal"> <button className="add" onClick={closeModal}>x</button> <EditPost post={post} onEdit={handleEdit} /></div>
+                            <div className="Modal"> <button className="add" onClick={closeModal}>x</button> 
+                            <div className="heading">
+                                 <h2>Edit your blog</h2>
+                            </div>
+                            <EditPost post={post} onEdit={handleEdit} /></div>
 
                           <li className="dropdown-link" onClick={() => handleDelete(post.id)}>Delete blog</li>
                           </>
@@ -1001,7 +989,7 @@ const showModal = (e)=>{
               })}
             </div>
            
-
+            }
             <div className="Grid-right-aside">
               <div className="overview">
                 <h2>Profile views</h2>
@@ -1017,10 +1005,10 @@ const showModal = (e)=>{
 
                   <li className="content">
                     <div className="categories">
-                      <button style={{backgroundColor:selectedTag=="all" ?"#2af83e":"" }} className="category" onClick={() => setSelectedTag('all')}>All</button>
-                      <button style={{backgroundColor:selectedTag=="Life Style" ?"#2af83e":""}} className="category" onClick={() =>setSelectedTag('Life Style')}>Life Style</button>
-                      <button style={{backgroundColor:selectedTag=="Gaming" ?"#2af83e":""}} className="category" onClick={() => setSelectedTag('Gaming')}>Gaming</button>
-                      <button style={{backgroundColor:selectedTag=="Stream" ?"#2af83e":""}} className="category" onClick={() =>setSelectedTag('Stream')}>Streams</button>
+                      <button style={{backgroundColor:selectedTag=="all" ?"#2af83e":"" }} className="category" onClick={() => {setSelectedTag('all');setIsLoading(true)}}>All</button>
+                      <button style={{backgroundColor:selectedTag=="Life Style" ?"#2af83e":""}} className="category" onClick={() =>{setSelectedTag('Life Style');setIsLoading(true)}}>Life Style</button>
+                      <button style={{backgroundColor:selectedTag=="Gaming" ?"#2af83e":""}} className="category" onClick={() => {setSelectedTag('Gaming');setIsLoading(true)}}>Gaming</button>
+                      <button style={{backgroundColor:selectedTag=="Stream" ?"#2af83e":""}} className="category" onClick={() =>{setSelectedTag('Stream');setIsLoading(true)}}>Streams</button>
                     </div>
                   </li>
                 </ul>
