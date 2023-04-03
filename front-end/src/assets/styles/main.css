@@ -2363,16 +2363,26 @@ div.Modal {
   position: fixed;
   top: 0;
   width: 80%;
-  left: 15%;
+  left: 10%;
   display: none;
   padding: 0px 20px;
   height: 100%;
   background-color: #0f162b;
-
-
-
+  overflow-y: scroll;
 }
 
+@media(max-width:767px){
+  form.Sign 
+  {
+    padding-left: 10px;;
+  }
+ form.Sign .input-container
+{
+
+
+  width:97%!important
+}
+}
 div.Modal div.Sign {
   padding: 0px !important;
   background-color: #0f162b;
@@ -2382,11 +2392,33 @@ div.Modal div.Sign {
 
 }
 
-div.Modal form.Sign {
+div.Modal .heading 
+{
 
-  margin-top: 0px;
+
+  color:#fff;
+  width:300px;
+  margin:auto;
+  padding-top:10px;
+  font-size: 20px;
 }
 
+div.Modal form.Sign {
+  margin:auto;
+  margin-top: 30px;
+  width:87%;
+
+  background: #0f162b;
+  box-shadow: 20px 20px 60px rgba(18, 20, 37, 0.2509803922), -20px -20px 60px #181b33;
+  border-radius: 50px;
+  padding:20px;
+
+}
+
+form.Sign svg 
+{
+  height:30px;
+}
 div.Modal div.Sign button {
   font-size: 20px;
   width: 150px
@@ -2396,6 +2428,8 @@ div.Modal button.add {
 
   top: 20px !important;
   bottom: 89%;
+  right:4%;
+  position:absolute;
 }
 
 div.Toastify button {
@@ -2449,4 +2483,56 @@ html {
 
   background-color: #fff;
   color: #0f162b
+}
+
+textarea 
+{
+
+  border:none;
+  outline: none;
+}
+
+a{
+  font-weight: 500;
+  font-family: "Sedgwick Ave Display", cursive;
+}
+
+
+.loader_post
+{
+position: fixed;
+display: flex;
+align-items: center;
+z-index: 10000000000000000000000;
+justify-content: center;
+background-color: #1d2333ad;
+top:0;left:0;
+width:100%;
+height:100%
+}
+.loader {
+  border: 10px solid #f3f3f3; /* Light grey */
+  border-top: 10px solid #2af83e;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin: auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+nav 
+{
+  z-index:100!important;
+
+}
+
+div.Modal 
+{
+  z-index: 10000000000;
+  position:fixed;
 }

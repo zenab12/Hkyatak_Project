@@ -1,11 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+
 import App from './App';
 import "./assets/styles/main.css"
+import viking from "./assets/images/viking3.png";
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
+    <>
+    
+    {/* <Helmet>
+          <title>Hkyatak</title>
+          <link rel="shortcut icon" type="image/png" href={viking}/>
+   </Helmet> */}
     <App />
+    </>
 );
 
 // If you want to start measuring performance in your app, pass a function
