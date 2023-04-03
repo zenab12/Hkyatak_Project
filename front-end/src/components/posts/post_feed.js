@@ -267,7 +267,7 @@ const [selectedTag, setSelectedTag] = useState('all');
   useEffect(() => {
     const getPosts = async () => {
       let posts = [...Posts];
-      posts = await axios.get("https://hkyatak-backend.vercel.app/api/posts");
+      posts = await axios.get("https://back-end-vercel.vercel.app/api/posts");
       setPost(posts.data);
       return posts.data;
     };
