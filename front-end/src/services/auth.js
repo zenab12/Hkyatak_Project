@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "https://back-end-vercel-1ftq1wkfp-harity.vercel.app/api";
+const API_URL = "https://hkyatak-backend.vercel.app/api";
 class AuthService {
   login(email, password) {
     return axios
