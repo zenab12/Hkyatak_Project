@@ -7,4 +7,4 @@ React project
 
 
 
-- [back-end deployment](https://hkyatak-backend.vercel.app/)
+- [back-end deployment](https://back-end-vercel.vercel.app/)
