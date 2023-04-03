@@ -19,7 +19,7 @@ const  CreatePost = () => {
         const data = { title, body,imageUrl,videoUrl,tags,userName,userId,userImg };
 
         if(data){
-        const response = await axios.post('http://localhost:3001/posts', data);
+        const response = await axios.post('https://hkyatak-backend.vercel.app/api/posts', data);
         console.log(response.data);
         
         if(response.status == 201 || 200)
