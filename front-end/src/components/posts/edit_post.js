@@ -31,7 +31,7 @@ const handleClick = () => {
       videoUrl:videoUrl,
       tags:tags
     };
-    axios.put(`http://localhost:3001/posts/${props.post.id}`, updatedPost)
+    axios.put(`https://hkyatak-backend.vercel.app/api/posts/${props.post.id}`, updatedPost)
       .then(response => {
         props.onEdit(response.data);
     //    window.location.reload();
