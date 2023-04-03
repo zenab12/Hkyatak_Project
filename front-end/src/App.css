@@ -52,13 +52,13 @@
   z-index: 9999;
 }
 
-.loader-app .logo {
+/* .loader-app .logo {
   width: 120px;
   height: 120px;
   background-image: url('../src/assets/images/viking3.png');
   background-size: contain;
   animation: spin 1s linear infinite;
-}
+} */
 
 .loading-text {
   font-size: 2rem;
