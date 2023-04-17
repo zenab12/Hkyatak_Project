@@ -50,7 +50,7 @@
 
 
 📦 Installation:
-- Clone the repository
+- Clone the repository : `https://github.com/zenab12/Hkyatak_Project.git`
 - Navigate to the project directory
 - Run npm install to install all dependencies
 - Run npm start to start the project
