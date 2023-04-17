@@ -20,6 +20,12 @@
   ├── src/
   │   ├── components/
   │   │   └── ...
+  │   ├── pages/
+  │   │   └── feed.js
+  |   |   └── ...
+  │   ├── servcies/
+  │   │   └── Auth.js
+  |   |   └── ...
   │   ├── App.js
   │   ├── index.js
   │   └── ...
@@ -33,7 +39,7 @@
 -   /components: Contains the reusable components used throughout the application.
 -  /pages: Contains the different pages of the application.
 -  /styles: Contains the global styles used throughout the application.
--  /utils: Contains utility functions used throughout the application.
+-  /servcies: Contains utility functions used throughout the application that make request on API entry point.
   
 
 👩‍💻 Tech Stack
