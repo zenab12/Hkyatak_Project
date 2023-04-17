@@ -4,7 +4,7 @@
 
 🚀 This is an exciting project that I have been working on to showcase my React skills. It's a web application with Gaming style that allows users to :
 
-- Register and Login to website 
+- Register , Login and Logout Features 
 - create blog with video or image in the blog post 
 - see other blogs 
 - edit or delete his/ her blog 
