@@ -1,7 +1,7 @@
-🚀 React Project
+# 🚀 React Project
 Welcome to our React project! 👋
 
-🚀 Getting Started
+## 🚀 Getting Started
 To get started with the project, follow these steps:
 
 - Clone the repository to your local machine using the following command: `git clone https://github.com/your-username/your-repo.git`
