@@ -4,7 +4,7 @@ Welcome to our React project! 👋
 ## 🚀 Getting Started
 To get started with the project, follow these steps:
 
-- Clone the repository to your local machine using the following command: `git clone https://github.com/your-username/your-repo.git`
+- Clone the repository to your local machine using the following command: `git clone https://github.com/zenab12/Hkyatak_Project.git`
 
 - Install the project dependencies by running `npm install`.
 
