@@ -13,11 +13,11 @@ To get started with the project, follow these steps:
 - Open your browser and navigate to `http://localhost:3000` to view the app.
 
 
-🛠️ Technologies Used
+## 🛠️ Technologies Used
 - React
 - JavaScript
 - HTML
 - CSS
 
-👏 Acknowledgments
+## 👏 Acknowledgments
 We would like to thank the React community for their ongoing support and contributions to this amazing library. We would also like to thank our contributors for their hard work and dedication to this project.
