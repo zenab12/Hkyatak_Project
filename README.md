@@ -36,10 +36,10 @@
 ```
 /src: Contains the source code of the application
 
--   /components: Contains the reusable components used throughout the application.
--  /pages: Contains the different pages of the application.
--  /styles: Contains the global styles used throughout the application.
--  /servcies: Contains utility functions used throughout the application that make request on API entry point.
+-  `/components`: Contains the reusable components used throughout the application.
+-  `/pages`: Contains the different pages of the application.
+-  `/styles`: Contains the global styles used throughout the application.
+-  `/servcies`: Contains utility functions used throughout the application that make request on API entry point.
   
 
 👩‍💻 Tech Stack
