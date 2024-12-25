@@ -1,6 +1,5 @@
 import { NavLink } from "react-router-dom";
 import Nabvar from "../components/common/navbar";
-
 let Home = () => {
   return (
     <div className="Home">
@@ -17,9 +16,7 @@ let Home = () => {
           <div className="Buttons">
           
               <button className="light">
-              // <NavLink className="navLink" to={localStorage.getItem("userToken")?"/feed":"/login"} >
               Get Started
-              // </NavLink>
             </button>
             
           
@@ -36,3 +33,5 @@ let Home = () => {
 };
 
 export default Home;
+     // <NavLink className="navLink" to={localStorage.getItem("userToken")?"/feed":"/login"} >
+    // </NavLink>
