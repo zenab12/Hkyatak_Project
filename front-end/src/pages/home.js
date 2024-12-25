@@ -17,9 +17,9 @@ let Home = () => {
           <div className="Buttons">
           
               <button className="light">
-              <NavLink className="navLink" to={localStorage.getItem("userToken")?"/feed":"/login"} >
+              // <NavLink className="navLink" to={localStorage.getItem("userToken")?"/feed":"/login"} >
               Get Started
-              </NavLink>
+              // </NavLink>
             </button>
             
           
